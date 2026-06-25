@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from pypdf import PdfReader
 
+import trafilatura
+
 from app.rag.vector_store import (
     CHUNKS_PATH,
     INDEX_PATH,
@@ -47,6 +49,51 @@ class PageDocument:
     url: str
     text: str
 
+def _parse_travel_page(html: str, url: str) -> PageDocument | None:
+    # Trafilatura extrae el texto principal ignorando menús y banners publicitarios
+    extracted_text = trafilatura.extract(html, include_links=False, favor_precision=True)
+    
+    if not extracted_text or len(extracted_text) < 100:
+        return None
+
+    # Intentar obtener el título
+    soup = BeautifulSoup(html, "html.parser")
+    title_tag = soup.find(["h1", "title"])
+    title = title_tag.get_text(strip=True) if title_tag else url
+
+    return PageDocument(title=title, url=url, text=extracted_text)
+
+def crawl_docs_trafilatura() -> list[PageDocument]:
+    if not DOCS_ROOT:
+        return []
+
+    seen: set[str] = set()
+    queue: deque[str] = deque([DOCS_ROOT])
+    pages: list[PageDocument] = []
+
+    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+        while queue and len(seen) < MAX_PAGES:
+            url = queue.popleft()
+            if url in seen: continue
+            seen.add(url)
+
+            try:
+                response = client.get(url)
+                response.raise_for_status()
+                html = response.text
+
+                # Usar el nuevo parser de viajes
+                page = _parse_travel_page(html, url)
+                if page:
+                    pages.append(page)
+
+                for link in _extract_links(html, url):
+                    if link not in seen:
+                        queue.append(link)
+            except Exception as e:
+                print(f"Error parseando {url}: {e}")
+
+    return pages
 
 def _is_doc_url(url: str) -> bool:
     parsed = urlparse(url)
@@ -148,7 +195,7 @@ def _split_document(doc: PageDocument) -> list[RAGChunk]:
     return chunks
 
 
-def crawl_docs() -> list[PageDocument]:
+def crawl_docs_beatiful() -> list[PageDocument]:
     if not DOCS_ROOT:
         return []
 
@@ -223,7 +270,7 @@ def build_index() -> str:
 
     pages = []
     if DOCS_ROOT:
-        pages.extend(crawl_docs())
+        pages.extend(crawl_docs_trafilatura())
     if DOCS_SOURCE_DIR:
         pages.extend(load_local_docs())
 

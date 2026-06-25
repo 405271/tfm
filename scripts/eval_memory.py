@@ -97,7 +97,11 @@ def _run_case(
 
         response = client.post(f"{api_url.rstrip('/')}/chat", json=payload, timeout=60.0)
         response.raise_for_status()
+        print(response.text)
         data = response.json()
+        print(data)
+        if data == None or not isinstance(data, dict):
+            raise ValueError(f"Expected a JSON object in response, got: {data}")
         reply = str(data["reply"])
         escalated = bool(data.get("escalated"))
         sources = data.get("sources") or []

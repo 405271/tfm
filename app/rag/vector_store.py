@@ -6,10 +6,14 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 
 import faiss
+from google import genai
 import numpy as np
 from dotenv import load_dotenv
 from langchain_core.embeddings import Embeddings
 from langchain_openai import OpenAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from google import genai
+
 
 try:
     from langchain_ollama import OllamaEmbeddings
@@ -49,7 +53,8 @@ class GenericVectorStore:
         vectors = embeddings.embed_documents([chunk.text for chunk in chunks])
         matrix = np.array(vectors, dtype="float32")
         faiss.normalize_L2(matrix)
-        index = faiss.IndexFlatIP(matrix.shape[1])
+        d = 768  # Dimensión de los embeddings, ajusta según tu modelo
+        index = faiss.IndexFlatIP(d) # matrix.shape[1]
         index.add(matrix)
         return cls(embeddings=embeddings, index=index, chunks=chunks)
 
@@ -84,6 +89,15 @@ class GenericVectorStore:
 
         vector = np.array([embedding], dtype="float32")
         faiss.normalize_L2(vector)
+        print(vector.shape)
+        print(self.index.d)
+
+        # Añade esto justo ANTES de: distances, indices = self.index.search(vector, k)
+        print("--- DEBUG FAISS ---")
+        print(f"Dimensión esperada por FAISS (self.index.d): {self.index.d}")
+        print(f"Dimensión de tu vector de búsqueda (vector.shape): {vector.shape}")
+        print("-------------------")
+
         distances, indices = self.index.search(vector, k)
 
         results: list[RAGChunk] = []
@@ -115,15 +129,40 @@ def _build_embeddings() -> Embeddings:
             base_url=os.getenv("EMBEDDINGS_BASE_URL") or None,
         )
 
+    if provider == "gemini":
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise RuntimeError("Missing GEMINI_API_KEY environment variable.")
+
+        client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+        print("Modelos disponibles:")
+        for model in client.models.list():
+            # Filtramos por nombre para mostrar los de embedding
+            if "embed" in model.name.lower():
+                print(f"- {model.name}")
+
+        return GoogleGenerativeAIEmbeddings(
+            api_key=api_key,
+            model=os.getenv("EMBEDDINGS_MODEL") or os.getenv("GEMINI_EMBEDDING_MODEL", "text-embedding-3-small"),
+            base_url=os.getenv("EMBEDDINGS_BASE_URL") or None,
+        )
+    
+    print("***provider")
+    print(provider)
     if provider == "ollama":
         if OllamaEmbeddings is None:
             raise RuntimeError(
                 "Ollama embeddings require the 'langchain-ollama' package to be installed."
             )
 
+        print("***")
+        print(os.getenv("EMBEDDINGS_MODEL"))
+        print(os.getenv("EMBEDDINGS_BASE_URL"))
+        
         return OllamaEmbeddings(
             model=os.getenv("EMBEDDINGS_MODEL", "nomic-embed-text"),
             base_url=os.getenv("EMBEDDINGS_BASE_URL") or os.getenv("LLM_BASE_URL", "http://127.0.0.1:11434"),
+            
         )
 
     if provider == "deepseek":

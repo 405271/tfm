@@ -3,8 +3,11 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
+import time
 from typing import Literal
 from uuid import uuid4
+import trafilatura
+import re
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -13,22 +16,15 @@ from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, System
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
+from langchain_google_genai import ChatGoogleGenerativeAI
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.rag.vector_store import GenericVectorStore
-
-try:
-    from langchain_ollama import ChatOllama
-except ImportError:  # pragma: no cover - optional dependency at runtime
-    ChatOllama = None
-
-try:
-    from memori import Memori
-except ImportError:  # pragma: no cover - optional dependency at runtime
-    Memori = None
-
+from google import genai
+from memori import Memori
 
 load_dotenv()
 
@@ -67,8 +63,8 @@ ESCALATION_KEYWORDS = {
     "reclamo",
     "supervisor",
     "abogado",
-    "cancelacion",
-    "cancelación",
+    #"cancelacion",
+    #"cancelación",
     "molesto",
     "enojado",
     "queja",
@@ -78,6 +74,11 @@ ESCALATION_KEYWORDS = {
     "no funciona",
 }
 
+
+def _scrape_live(url: str) -> str:
+    downloaded = trafilatura.fetch_url(url)
+    text = trafilatura.extract(downloaded, include_links=False)
+    return text if text else "No se pudo extraer contenido."
 
 def _load_json_entries(path: Path, required_keys: tuple[str, ...]) -> list[dict[str, str]]:
     if not path.exists():
@@ -144,6 +145,23 @@ def _build_model() -> BaseChatModel:
             base_url=os.getenv("LLM_BASE_URL") or None,
         )
 
+    if provider == "gemini":
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise RuntimeError("Missing GEMINI_API_KEY environment variable.")
+
+        client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+        print("Modelos disponibles:")
+        for model in client.models.list():
+            print(f"- {model.name}")
+
+        return ChatGoogleGenerativeAI(
+            model=os.getenv("LLM_MODEL") or os.getenv("GEMINI_MODEL", "gemini-pro"),
+            temperature=temperature,
+            api_key=api_key,
+            base_url=os.getenv("LLM_BASE_URL") or None,
+        )
+    
     if provider == "deepseek":
         api_key = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
         if not api_key:
@@ -164,10 +182,15 @@ def _build_model() -> BaseChatModel:
                 "Ollama support requires the 'langchain-ollama' package to be installed."
             )
 
-        return ChatOllama(
-            model=os.getenv("LLM_MODEL", "llama3.1"),
+        return ChatOpenAI(
+            model=os.getenv("LLM_MODEL", "qwen:0.5b"),
+            base_url="http://127.0.0.1:11434/v1", # El puerto local de Ollama
+            api_key="ollama", # Requerido por la librería, aunque en local no se usa
             temperature=temperature,
-            base_url=os.getenv("LLM_BASE_URL", "http://127.0.0.1:11434"),
+            frequency_penalty=1.5,
+            presence_penalty=0.5,
+            #base_url=os.getenv("LLM_BASE_URL", "http://127.0.0.1:11434"),
+            #num_ctx=512 # Limita cuántos tokens (memoria) puede usar el modelo para leer
         )
 
     raise RuntimeError(
@@ -207,22 +230,22 @@ def _build_model_with_memory(session_id: str) -> tuple[BaseChatModel, object | N
     if not _env_flag("MEMORI_ENABLED"):
         return model, None
 
-    provider = os.getenv("LLM_PROVIDER", "openai").strip().lower()
-    if provider == "ollama":
-        raise RuntimeError(
-            "Memori integration is not configured for Ollama in this project. "
-            "Disable MEMORI_ENABLED or use openai/deepseek."
-        )
-
     if Memori is None:
         raise RuntimeError(
             "Memori integration is enabled but the 'memori' package is not installed."
         )
 
+    # 2. Inicializa Memori (usando tu configuración de base de datos si la tienes)
+    memori = Memori() 
+    
+    # 3. Registra el modelo directamente sin usar ProviderConfig
     memori = Memori(conn=_get_memori_session_factory()).llm.register(chatopenai=model)
+
     if not MEMORI_STORAGE_READY:
         memori.config.storage.build()
         MEMORI_STORAGE_READY = True
+    
+    # 4. Atribuir la memoria a la sesión actual
     memori.attribution(
         entity_id=session_id,
         process_id=os.getenv("MEMORI_PROCESS_ID", "support-api"),
@@ -384,7 +407,7 @@ def _trim_history(messages: list["ChatMessage"], limit: int = 12) -> list["ChatM
     return messages[-limit:]
 
 
-def _rag_context(message: str, k: int = 4) -> tuple[str, list["SourceItem"]]:
+def _rag_context(message: str, k: int = 1) -> tuple[str, list["SourceItem"]]:
     store = _load_vector_store()
     if store is None:
         return "", []
@@ -441,22 +464,25 @@ prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            (
-                "Eres un asistente de atencion al cliente. "
-                f"Atiendes consultas funcionales del producto {PRODUCT_NAME}. "
-                "Responde en espanol, con tono profesional, breve y claro. "
-                "Usa solo la informacion del contexto FAQ cuando aplique. "
-                "Si el usuario reporta un problema o caso incompleto, pide primero contexto suficiente para entender la situacion, "
-                "la accion realizada, el comportamiento observado y el resultado esperado. "
-                "No inventes funcionalidades, configuraciones, endpoints ni estados internos que no esten en el contexto. "
-                "Prioriza la informacion del contexto RAG y de las FAQs por encima de cualquier suposicion. "
-                "Cuando hables de soporte humano, usa estos canales: "
-                f"{SUPPORT_CONTACT}. "
-                "Si el caso requiere revision humana, indicalo con claridad y ofrece escalarlo."
-            ),
+            "Eres un asistente de atencion al cliente. "
+            "REGLA ESTRICTA: Tu respuesta debe ser SIEMPRE en español. "
+            "Si el contexto recuperado (RAG o Web en vivo) está en inglés u otro idioma, "
+            "extrae la información, tradúcela internamente y redacta tu respuesta final únicamente en español. "
+            "Utiliza un tono amable, persuasivo y profesional."
+            f"Atiendes consultas funcionales del producto {PRODUCT_NAME}. "
+            "Responde en espanol, con tono profesional, breve y claro. "
+            "Usa solo la informacion del contexto FAQ cuando aplique. "
+            "Si el usuario reporta un problema o caso incompleto, pide primero contexto suficiente para entender la situacion, "
+            "la accion realizada, el comportamiento observado y el resultado esperado. "
+            "No inventes funcionalidades, configuraciones, endpoints ni estados internos que no esten en el contexto. "
+            "Prioriza la informacion del contexto RAG y de las FAQs por encima de cualquier suposicion. "
+            "Cuando hables de soporte humano, usa estos canales: "
+            f"{SUPPORT_CONTACT}. "
+            "Si el caso requiere revision humana, indicalo con claridad y ofrece escalarlo."
+            "Memoria del cliente:\n{memory_context}"
+            "Contexto documental recuperado:\n{rag_context}"
+            "Contexto FAQ disponible:\n{faq_context}"
         ),
-        ("system", "Contexto documental recuperado:\n{rag_context}"),
-        ("system", "Contexto FAQ disponible:\n{faq_context}"),
         MessagesPlaceholder("history"),
         ("human", "{input}"),
     ]
@@ -470,6 +496,7 @@ async def health() -> dict[str, str]:
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(payload: ChatRequest) -> ChatResponse:
+    start_time = time.time() # iniciar evaluacion de rendimiento
     session_id = payload.session_id or str(uuid4())
     history_source = payload.history or SESSION_STORE.get(session_id, [])
     history = _trim_history(list(history_source))
@@ -520,22 +547,49 @@ async def chat(payload: ChatRequest) -> ChatResponse:
         SESSION_STORE[session_id] = _trim_history(updated_history)
         return ChatResponse(session_id=session_id, reply=direct_answer, escalated=False, sources=[])
 
-    rag_context, rag_sources = _rag_context(payload.message)
+    # 1. Recuperar contexto RAG normal (PDFs y docs predefinidos)
+    rag_context, rag_sources = _rag_context(payload.message, k = 1)
+    live_context = ""
+
+    # 2. Lógica simple para detectar URLs en el mensaje del usuario
+    urls = re.findall(r'(https?://[^\s]+)', payload.message)
+    if urls:
+        # Extraer info en tiempo real de la primera URL encontrada
+        live_context = _scrape_live(urls[0])
+        rag_context += f"\n\nContexto Web en vivo:\n{live_context}"
+        rag_sources.append(SourceItem(title="Web en tiempo real", url=urls[0]))
 
     try:
-        model, _memori_session = _build_model_with_memory(session_id)
+        model, memori_session = _build_model_with_memory(session_id)
     except RuntimeError as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
+    # Extraer memoria explícita si Memori está activo
+    memory_context = "Sin memoria previa."
+    if memori_session and hasattr(memori_session, 'get_memory'):
+        memory_context = memori_session.get_memory(session_id) or memory_context
+    
     chain = prompt | model | StrOutputParser()
+
+    # Asegurar que los contextos nunca estén vacíos
+    clean_memory = memory_context if memory_context and memory_context.strip() else "Ninguna todavía."
+    clean_rag = rag_context if rag_context and rag_context.strip() else "Sin contexto recuperado."
+    clean_faq = _faq_context(payload.message)
+    clean_faq = clean_faq if clean_faq and clean_faq.strip() else "Sin FAQs relevantes."
+
     reply = await chain.ainvoke(
         {
-            "history": _to_langchain_messages(history),
+            "history": _to_langchain_messages(history[-4:]), # Limita el historial a los últimos 4 mensajes
             "input": payload.message,
-            "faq_context": _faq_context(payload.message),
-            "rag_context": rag_context or "Sin contexto recuperado.",
+            "faq_context": clean_faq,
+            "rag_context": clean_rag,
+            "memory_context": clean_memory,
         }
     )
+
+    # Evaluación y trazabilidad
+    process_time = time.time() - start_time
+    print(f"[EVALUACIÓN] Sesión: {session_id} | Tiempo: {process_time:.2f}s | Fuentes RAG: {len(rag_sources)}")
 
     updated_history = history + [
         ChatMessage(role="user", content=payload.message),
