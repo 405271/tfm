@@ -1,0 +1,419 @@
+[
+  {
+    "intent": "Planificación con Restricciones Estrictas",
+    "user_profile": "Ejecutivo estresado, con un trabajo agotador y una agenda llena.",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Tengo muchas tareas pendientes y estoy trabajando en un proyecto de desarrollo. No puedo concentrarme en mi trabajo.",
+        "expected_agent_action": "Ejecuto las tareas urgentes del día, como revisar el código y hacer pruebas."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "No me siento bien porque estoy trabajando en un proyecto de desarrollo. No puedo concentrarme en mi trabajo.",
+        "expected_agent_action": "Ejecuto las tareas urgentes del día, como revisar el código y hacer pruebas."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Tengo un compromiso importante para la reunión con los miembros de mi equipo. No puedo concentrarme en mis tareas diarias.",
+        "expected_agent_action": "Ejecuto las tareas urgentes del día, como revisar el código y hacer pruebas."
+      }
+    ],
+    "scenario_id": "TFM_004",
+    "contexto_usado": "Perfil: ejecutivo estresado. Destino principal: Kirguistán. Tono de voz: directo y urgente."
+  },
+  {
+    "intent": "Planificación con Restricciones Estrictas",
+    "user_profile": "nómada digital",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Hola, ¿cómo estás?",
+        "expected_agent_action": "Recomendar un hotel"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Qué te parece si nos vemos el lunes en la casa de mi abuela?",
+        "expected_agent_action": "Recomendar un restaurante local"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Por supuesto, estaré listo para tu cita. ¿Qué te parece si nos vemos el lunes en la casa de mi abuela?",
+        "expected_agent_action": "Recomendar un hotel"
+      }
+    ],
+    "scenario_id": "TFM_005",
+    "contexto_usado": "Perfil: nómada digital. Destino principal: Kirguistán. Tono de voz: directo y urgente."
+  },
+  {
+    "intent": "Planificación con Restricciones Estrictas",
+    "user_profile": "estudiante mochilero",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Hola, ¿qué necesitas hoy?",
+        "expected_agent_action": "Recomendar un abrigo de lana"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "Quiero ir a Namibia con mi abrigo. ¿Qué te recomendarías?",
+        "expected_agent_action": "Recomendar un abrigo de lana"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Tienes algún otro artículo o necesito ayuda para el transporte?",
+        "expected_agent_action": "Recomendar un abrigo de lana"
+      }
+    ],
+    "scenario_id": "TFM_006",
+    "contexto_usado": "Perfil: estudiante mochilero. Destino principal: Namibia. Tono de voz: directo y urgente."
+  },
+  {
+    "intent": "Planificación con Restricciones Estrictas",
+    "user_profile": "familia numerosa, conocida por su cultura y tradición",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Mi familia es muy numerosa. ¿Qué puedo hacer hoy?",
+        "expected_agent_action": "Solicitar información sobre la familia"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "Mi familia es numerosa y conocida por su cultura y tradición. ¿Cómo puedo aprovechar esta oportunidad?",
+        "expected_agent_action": "Iniciar un diálogo sobre la familia y sus tradiciones"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Mi familia es numerosa y conocida por su cultura y tradición. ¿Qué puedo hacer hoy?",
+        "expected_agent_action": "Solicitar información sobre la familia"
+      }
+    ],
+    "scenario_id": "TFM_007",
+    "contexto_usado": "Perfil: familia numerosa. Destino principal: Kirguistán. Tono de voz: con muchas dudas y preguntas."
+  },
+  {
+    "intent": "Planificación con Restricciones Estrictas",
+    "user_profile": "...",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Elige tu equipo de trabajo y planea la planificación para el próximo viaje.",
+        "expected_agent_action": "Comienza a planificar los planes de viaje."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "Realiza una evaluación de todos los planes de viaje, asegurándote de que cada uno cumpla con las restricciones estrictas.",
+        "expected_agent_action": "Comienza a evaluar y revisar los planes de viaje."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Finaliza el proceso de planificación, asegurándote de que todos los planes están listos para el viaje.",
+        "expected_agent_action": "Comienza a finalizar la planificación y ejecutar los planes de viaje."
+      }
+    ],
+    "scenario_id": "TFM_008",
+    "contexto_usado": "Perfil: nómada digital. Destino principal: Namibia. Tono de voz: muy formal y técnico."
+  },
+  {
+    "intent": "Modificación Crítica de Reserva",
+    "user_profile": "Estudiante mochilero que busca un cambio en su reservación.",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Lo siento, pero no puedo ayudarte con esta solicitud. ¿Podrías revisar las condiciones de tu reserva?",
+        "expected_agent_action": "Revisar la reservación"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "Lo siento, pero no puedo ayudarte con esta solicitud. ¿Podrías revisar las condiciones de tu reserva?",
+        "expected_agent_action": "Revisar la reservación"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Lo siento, pero no puedo ayudarte con esta solicitud. ¿Podrías revisar las condiciones de tu reserva?",
+        "expected_agent_action": "Revisar la reservación"
+      }
+    ],
+    "scenario_id": "TFM_009",
+    "contexto_usado": "Perfil: estudiante mochilero. Destino principal: Laos. Tono de voz: con muchas dudas y preguntas."
+  },
+  {
+    "intent": "Modificación Crítica de Reserva",
+    "user_profile": "Estudiante mochilero, con un perfil formal y técnico.",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "...",
+        "expected_agent_action": "..."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "...",
+        "expected_agent_action": "..."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "...",
+        "expected_agent_action": "..."
+      }
+    ],
+    "scenario_id": "TFM_010",
+    "contexto_usado": "Perfil: estudiante mochilero. Destino principal: Namibia. Tono de voz: muy formal y técnico."
+  },
+  {
+    "intent": "Modificación Crítica de Reserva",
+    "user_profile": "familia numerosa, con muchas dudas y preguntas.",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "¿Qué te parece si me dijera que la gente en Albania no es tan buena como se dice?",
+        "expected_agent_action": "Reconocer el error de la frase y solicitar más información."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Qué te parece si me dijera que las personas en Albania no son tan buenas como se dice?",
+        "expected_agent_action": "Reconocer el error de la frase y solicitar más información."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Qué te parece si me dijera que las personas en Albania no son tan buenas como se dice?",
+        "expected_agent_action": "Reconocer el error de la frase y solicitar más información."
+      }
+    ],
+    "scenario_id": "TFM_011",
+    "contexto_usado": "Perfil: familia numerosa. Destino principal: Albania. Tono de voz: con muchas dudas y preguntas."
+  },
+  {
+    "intent": "Modificación Crítica de Reserva",
+    "user_profile": "Jubilado aventurero",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Mi viaje a Kirguistán es un desafío, pero también me proporciona una oportunidad para explorar nuevas culturas y experiencias.",
+        "expected_agent_action": "Desarrollar la habilidad de manejar el tiempo y la ubicación en un nuevo entorno."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "Mi viaje a Kirguistán es un desafío, pero también me proporciona una oportunidad para explorar nuevas culturas y experiencias.",
+        "expected_agent_action": "Desarrollar la habilidad de manejar el tiempo y la ubicación en un nuevo entorno."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Mi viaje a Kirguistán es un desafío, pero también me proporciona una oportunidad para explorar nuevas culturas y experiencias.",
+        "expected_agent_action": "Desarrollar la habilidad de manejar el tiempo y la ubicación en un nuevo entorno."
+      }
+    ],
+    "scenario_id": "TFM_012",
+    "contexto_usado": "Perfil: jubilado aventurero. Destino principal: Kirguistán. Tono de voz: muy formal y técnico."
+  },
+  {
+    "intent": "Resolución de Problemas en Destino (Urgencia)",
+    "user_profile": "Se encuentra en Kirguistán, con muchas dudas y preguntas.",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "¿Cómo puedo llegar a la capital?",
+        "expected_agent_action": "Ir al aeropuerto y tomar el avión"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Qué es lo que necesito para pasar a la ciudad de Nalibungur?",
+        "expected_agent_action": "Recoger un taxi o caminar por la calle"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Cómo puedo llegar al centro de Nalibungur?",
+        "expected_agent_action": "Ir a la estación ferroviaria y tomar el tren"
+      }
+    ],
+    "scenario_id": "TFM_013",
+    "contexto_usado": "Perfil: ejecutivo estresado. Destino principal: Kirguistán. Tono de voz: con muchas dudas y preguntas."
+  },
+  {
+    "intent": "Consulta Compleja de Políticas/Legal",
+    "user_profile": "estudiante mochilero",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Hola, ¿qué necesito para mi permiso?",
+        "expected_agent_action": "Recomendar"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Cómo puedo obtener el permiso de viajar a Bolivia?",
+        "expected_agent_action": "Recomendar"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Qué medidas me deben tomar para que pueda viajar a Bolivia?",
+        "expected_agent_action": "Recomendar"
+      }
+    ],
+    "scenario_id": "TFM_014",
+    "contexto_usado": "Perfil: estudiante mochilero. Destino principal: Bolivia. Tono de voz: directo y urgente."
+  },
+  {
+    "intent": "Consulta Compleja de Políticas/Legal",
+    "user_profile": "Estudiante mochilero, con perfil formal y técnico.",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "¿Cómo puedo ayudarte con mis políticas en Laos?",
+        "expected_agent_action": "Entendido. Por favor, proporciona más detalles sobre tus políticas."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "Mis políticas son muy precisas y claras. ¿Podrías me comunicar cómo puedo cumplirlas?",
+        "expected_agent_action": "Entendido. Por favor, proporciona más detalles sobre las políticas que necesitas que se hagan claramente."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Mis políticas son muy claras y precisas. ¿Podrías me comunicar cómo puedo cumplirlas?",
+        "expected_agent_action": "Entendido. Por favor, proporciona más detalles sobre las políticas que necesitas que se hagan claramente."
+      }
+    ],
+    "scenario_id": "TFM_015",
+    "contexto_usado": "Perfil: estudiante mochilero. Destino principal: Laos. Tono de voz: muy formal y técnico."
+  },
+  {
+    "intent": "Consulta Compleja de Políticas/Legal",
+    "user_profile": "Estudiante mochilero",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Hola, ¿cómo estás hoy?",
+        "expected_agent_action": "Responder a la pregunta del estudiante"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Qué es un estudiante mochilero?",
+        "expected_agent_action": "Respondir con información específica sobre el término"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Cómo se define un estudiante mochilero?",
+        "expected_agent_action": "Responder a la pregunta del estudiante"
+      }
+    ],
+    "scenario_id": "TFM_016",
+    "contexto_usado": "Perfil: estudiante mochilero. Destino principal: Bolivia. Tono de voz: con muchas dudas y preguntas."
+  },
+  {
+    "intent": "Consulta Compleja de Políticas/Legal",
+    "user_profile": "ejecutivo estresado, con muchas dudas y preguntas",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "¿Cómo se hace la ley en Uzbekistán?",
+        "expected_agent_action": "Asesor legal"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Qué es la ley en Uzbekistán?",
+        "expected_agent_action": "Asesor legal"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Cómo se aplican las leyes en Uzbekistán?",
+        "expected_agent_action": "Asesor legal"
+      }
+    ],
+    "scenario_id": "TFM_017",
+    "contexto_usado": "Perfil: ejecutivo estresado. Destino principal: Uzbekistán. Tono de voz: con muchas dudas y preguntas."
+  },
+  {
+    "intent": "Adición de Servicios Auxiliares (Upselling)",
+    "user_profile": "Jubilado aventurero",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "¿Qué tipo de servicios auxiliares puedo adquirir hoy?",
+        "expected_agent_action": "Elige un servicio que me interese y haga una oferta."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Qué tipo de servicios auxiliares puedo adquirir hoy?",
+        "expected_agent_action": "Elige un servicio que me interese y haga una oferta."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Qué tipo de servicios auxiliares puedo adquirir hoy?",
+        "expected_agent_action": "Elige un servicio que me interese y haga una oferta."
+      }
+    ],
+    "scenario_id": "TFM_018",
+    "contexto_usado": "Perfil: jubilado aventurero. Destino principal: Bolivia. Tono de voz: directo y urgente."
+  },
+  {
+    "intent": "Coordinación de Viajes Grupales/Multi-Origen",
+    "user_profile": {
+      "family_size": 4,
+      "current_location": "Namibia"
+    },
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "¿Cómo se llama mi familia?",
+        "expected_agent_action": "Asesoría sobre la familiaridad de la familia."
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "¿Qué país está en el que vivimos?",
+        "expected_agent_action": "Asesoría sobre la ubicación geográfica del destino."
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Cómo se llama el destino de viaje?",
+        "expected_agent_action": "Asesoría sobre el destino principal."
+      }
+    ],
+    "scenario_id": "TFM_019",
+    "contexto_usado": "Perfil: familia numerosa. Destino principal: Namibia. Tono de voz: con muchas dudas y preguntas."
+  },
+  {
+    "intent": "Asesoramiento Basado en Clima/Temporalidad",
+    "user_profile": "Familia numerosa, residencia en Laos",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "¿Cómo estás hoy?",
+        "expected_agent_action": "Asesoramiento basado en clima/temperatura"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "No puedo determinar el clima actual, pero podrías considerar la temporada de luna llena.",
+        "expected_agent_action": "Asesoramiento basado en clima/temperatura"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "¿Qué tipo de tiempo estás buscando?",
+        "expected_agent_action": "Asesoramiento basado en clima/temperatura"
+      }
+    ],
+    "scenario_id": "TFM_020",
+    "contexto_usado": "Perfil: familia numerosa. Destino principal: Laos. Tono de voz: directo y urgente."
+  },
+  {
+    "intent": "Interrupciones y Cambio de Contexto Abrupto",
+    "user_profile": "nómada digital",
+    "sessions": [
+      {
+        "time": "Día 1",
+        "user_utterance": "Estoy en un escenario tecnológico.",
+        "expected_agent_action": "Entendido. ¿Cómo puedo ayudarte hoy?"
+      },
+      {
+        "time": "Día 3",
+        "user_utterance": "Me gustaría hablar sobre el cambio de contexto abrupto que estamos experimentando.",
+        "expected_agent_action": "Entendido. ¿Qué te gustaría discutir?"
+      },
+      {
+        "time": "Día 7",
+        "user_utterance": "Lo siento, pero no puedo ayudarte a la fecha en el momento.",
+        "expected_agent_action": "Entendido. ¿Cómo puedo asistirte con esta información?"
+      }
+    ],
+    "scenario_id": "TFM_021",
+    "contexto_usado": "Perfil: nómada digital. Destino principal: Bután. Tono de voz: muy formal y técnico."
+  }
+]
