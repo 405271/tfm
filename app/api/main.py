@@ -74,6 +74,12 @@ ESCALATION_KEYWORDS = {
     "no funciona",
 }
 
+def mask_pii(text: str) -> str:
+    # Ocultar correos electrónicos
+    text = re.sub(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+', '[CORREO]', text)
+    # Ocultar tarjetas de crédito o pasaportes (ejemplo genérico a numérico largo)
+    text = re.sub(r'\b\d{9,16}\b', '[NUM_OCULTO]', text)
+    return text
 
 def _scrape_live(url: str) -> str:
     downloaded = trafilatura.fetch_url(url)
@@ -501,11 +507,12 @@ async def chat(payload: ChatRequest) -> ChatResponse:
     history_source = payload.history or SESSION_STORE.get(session_id, [])
     history = _trim_history(list(history_source))
     escalated = _should_escalate(payload.message)
-
-    if _needs_incident_context(payload.message):
+    safe_message = mask_pii(payload.message)
+    
+    if _needs_incident_context(safe_message):
         reply = ISSUE_CONTEXT_REQUEST
         updated_history = history + [
-            ChatMessage(role="user", content=payload.message),
+            ChatMessage(role="user", content=safe_message),
             ChatMessage(role="assistant", content=reply),
         ]
         SESSION_STORE[session_id] = _trim_history(updated_history)
@@ -514,16 +521,16 @@ async def chat(payload: ChatRequest) -> ChatResponse:
     if escalated:
         reply = f"{ESCALATION_REQUEST} Canales de soporte: {SUPPORT_CONTACT}."
         updated_history = history + [
-            ChatMessage(role="user", content=payload.message),
+            ChatMessage(role="user", content=safe_message),
             ChatMessage(role="assistant", content=reply),
         ]
         SESSION_STORE[session_id] = _trim_history(updated_history)
         return ChatResponse(session_id=session_id, reply=reply, escalated=True, sources=[])
 
-    glossary_answer = _glossary_answer(payload.message)
+    glossary_answer = _glossary_answer(safe_message)
     if glossary_answer:
         updated_history = history + [
-            ChatMessage(role="user", content=payload.message),
+            ChatMessage(role="user", content=safe_message),
             ChatMessage(role="assistant", content=glossary_answer),
         ]
         SESSION_STORE[session_id] = _trim_history(updated_history)
@@ -538,21 +545,21 @@ async def chat(payload: ChatRequest) -> ChatResponse:
             sources=[glossary_source],
         )
 
-    direct_answer = _direct_faq_answer(payload.message)
+    direct_answer = _direct_faq_answer(safe_message)
     if direct_answer:
         updated_history = history + [
-            ChatMessage(role="user", content=payload.message),
+            ChatMessage(role="user", content=safe_message),
             ChatMessage(role="assistant", content=direct_answer),
         ]
         SESSION_STORE[session_id] = _trim_history(updated_history)
         return ChatResponse(session_id=session_id, reply=direct_answer, escalated=False, sources=[])
 
     # 1. Recuperar contexto RAG normal (PDFs y docs predefinidos)
-    rag_context, rag_sources = _rag_context(payload.message, k = 1)
+    rag_context, rag_sources = _rag_context(safe_message, k = 1)
     live_context = ""
 
     # 2. Lógica simple para detectar URLs en el mensaje del usuario
-    urls = re.findall(r'(https?://[^\s]+)', payload.message)
+    urls = re.findall(r'(https?://[^\s]+)', safe_message)
     if urls:
         # Extraer info en tiempo real de la primera URL encontrada
         live_context = _scrape_live(urls[0])
@@ -574,13 +581,13 @@ async def chat(payload: ChatRequest) -> ChatResponse:
     # Asegurar que los contextos nunca estén vacíos
     clean_memory = memory_context if memory_context and memory_context.strip() else "Ninguna todavía."
     clean_rag = rag_context if rag_context and rag_context.strip() else "Sin contexto recuperado."
-    clean_faq = _faq_context(payload.message)
+    clean_faq = _faq_context(safe_message)
     clean_faq = clean_faq if clean_faq and clean_faq.strip() else "Sin FAQs relevantes."
 
     reply = await chain.ainvoke(
         {
             "history": _to_langchain_messages(history[-4:]), # Limita el historial a los últimos 4 mensajes
-            "input": payload.message,
+            "input": safe_message,
             "faq_context": clean_faq,
             "rag_context": clean_rag,
             "memory_context": clean_memory,
@@ -592,7 +599,7 @@ async def chat(payload: ChatRequest) -> ChatResponse:
     print(f"[EVALUACIÓN] Sesión: {session_id} | Tiempo: {process_time:.2f}s | Fuentes RAG: {len(rag_sources)}")
 
     updated_history = history + [
-        ChatMessage(role="user", content=payload.message),
+        ChatMessage(role="user", content=safe_message),
         ChatMessage(role="assistant", content=reply),
     ]
     SESSION_STORE[session_id] = _trim_history(updated_history)
