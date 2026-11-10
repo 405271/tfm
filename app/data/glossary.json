@@ -1,0 +1,82 @@
+[
+  {
+    "term": "PNR",
+    "definition": "Passenger Name Record. Código localizador de vuelo de 6 caracteres alfanuméricos que identifica la reserva de billetes de avión en el sistema de la aerolínea. Se utiliza para el check-in online y para gestionar cambios en los billetes."
+  },
+  {
+    "term": "localizador de vuelo",
+    "definition": "Código alfanumérico de 6 caracteres (también llamado PNR o referencia de la reserva aérea) que identifica la reserva de un vuelo en el sistema de la aerolínea. Necesario para el check-in online y para consultar el estado del vuelo."
+  },
+  {
+    "term": "bono de viaje",
+    "definition": "Documento oficial emitido por la agencia de viajes que recoge todos los servicios contratados: vuelo, alojamiento, traslados y otros extras. Funciona como voucher de confirmación y debe presentarse en el hotel, agencia de alquiler o proveedor de servicios en destino."
+  },
+  {
+    "term": "pensión completa",
+    "definition": "Régimen de alojamiento que incluye desayuno, almuerzo y cena en el hotel. Existen dos modalidades: pensión completa básica (solo bebidas sin alcohol en comidas) y pensión completa con bebidas (incluye refrescos, cervezas y vinos en las comidas)."
+  },
+  {
+    "term": "media pensión",
+    "definition": "Régimen de alojamiento que incluye desayuno y cena. El almuerzo no está incluido, lo que permite mayor flexibilidad para comer fuera del hotel. Es el régimen más habitual en paquetes de sol y playa."
+  },
+  {
+    "term": "all inclusive",
+    "definition": "Régimen que incluye todas las comidas del día, bebidas locales e internacionales en horario de bar, snacks entre horas y actividades deportivas no motorizadas del hotel. Las excursiones externas, restaurantes gourmet con reserva y servicios de spa suelen tener coste adicional."
+  },
+  {
+    "term": "traslado",
+    "definition": "Servicio de transporte organizado entre el aeropuerto y el hotel (o viceversa). Puede ser en autobús compartido (shuttle) o en vehículo privado. El traslado compartido incluye paradas en varios hoteles y puede ser más largo; el privado es directo y exclusivo."
+  },
+  {
+    "term": "transfer",
+    "definition": "Término anglicado para traslado. Servicio de transporte entre el aeropuerto y el alojamiento incluido habitualmente en los paquetes turísticos. Ver también: traslado."
+  },
+  {
+    "term": "localizador de reserva",
+    "definition": "Código alfanumérico único asignado por la agencia de viajes que identifica la reserva completa del cliente (vuelo + hotel + traslados). Diferente al localizador de vuelo (PNR) de la aerolínea. Necesario para cualquier consulta o modificación con la agencia."
+  },
+  {
+    "term": "visado",
+    "definition": "Permiso emitido por las autoridades de un país que autoriza la entrada y permanencia de un ciudadano extranjero en su territorio por un período determinado. El visado de turista suele tener validez de 30 a 90 días. Su tramitación puede tardar varias semanas."
+  },
+  {
+    "term": "franquicia de equipaje",
+    "definition": "Límite de peso o número de maletas que se pueden facturar o llevar como equipaje de mano sin coste adicional en un vuelo. Varía según la aerolínea, la ruta y la tarifa contratada. El exceso de equipaje tiene un coste adicional que puede ser elevado si se paga en el aeropuerto."
+  },
+  {
+    "term": "no-show",
+    "definition": "Situación en la que el pasajero o cliente no se presenta a usar el servicio reservado (vuelo, hotel, traslado) sin haber cancelado previamente. En la mayoría de tarifas implica la pérdida total del importe abonado y la anulación del resto de servicios vinculados."
+  },
+  {
+    "term": "overbooking",
+    "definition": "Práctica de las aerolíneas y hoteles de aceptar más reservas de las plazas disponibles, asumiendo que habrá cancelaciones. Cuando todos los reservantes se presentan, la aerolínea está obligada a ofrecer compensación económica y vuelo alternativo según el Reglamento CE 261/2004."
+  },
+  {
+    "term": "upgrade",
+    "definition": "Mejora de categoría de un servicio ya reservado: una habitación superior en el hotel o asientos en una clase superior en el avión. Puede ser gratuito (sujeto a disponibilidad al hacer check-in) o de pago si se solicita con antelación."
+  },
+  {
+    "term": "check-in online",
+    "definition": "Proceso de registro en el vuelo realizado por internet en la web de la aerolínea, generalmente disponible entre 48 y 24 horas antes de la salida. Permite elegir asiento y obtener la tarjeta de embarque digital sin necesidad de pasar por los mostradores del aeropuerto."
+  },
+  {
+    "term": "pax",
+    "definition": "Abreviatura del término en inglés 'passenger'. Se utiliza en el sector de viajes para referirse a cada uno de los viajeros incluidos en una reserva. Por ejemplo: 'reserva para 2 pax' significa reserva para 2 personas."
+  },
+  {
+    "term": "seguro de cancelación",
+    "definition": "Póliza de seguro que cubre el reembolso total o parcial de los gastos de la reserva si el viaje debe cancelarse por causas justificadas (enfermedad, fallecimiento de familiar, desempleo, etc.). Es diferente al seguro de asistencia en viaje, que cubre incidencias durante el desplazamiento."
+  },
+  {
+    "term": "APIS",
+    "definition": "Advance Passenger Information System. Sistema de información anticipada de pasajeros. Datos del pasaporte del viajero (nombre completo, número de pasaporte, fecha de nacimiento, nacionalidad) que algunas aerolíneas y países exigen comunicar previamente al vuelo. Suelen solicitarse durante el check-in online."
+  },
+  {
+    "term": "reconfirmación",
+    "definition": "Confirmación del vuelo o servicio que algunos destinos o aerolíneas exigen realizar telefónicamente 72 horas antes de la salida. Práctica en desuso en la mayoría de aerolíneas pero aún requerida por algunos proveedores de servicios en destino."
+  },
+  {
+    "term": "touroperador",
+    "definition": "Empresa mayorista de viajes que diseña, organiza y comercializa paquetes turísticos combinando transporte, alojamiento y otros servicios. La agencia de viajes actúa como intermediaria entre el touroperador y el cliente final. Abreviado como TTOO."
+  }
+]

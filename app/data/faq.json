@@ -1,0 +1,102 @@
+[
+  {
+    "question": "¿Cómo puedo cancelar mi reserva?",
+    "answer": "Puedes cancelar tu reserva contactando con nosotros por teléfono, correo electrónico o a través del área de cliente. Las condiciones de cancelación dependen del tipo de tarifa contratada. En tarifas flexibles se aplica el reembolso íntegro si se cancela con más de 30 días de antelación. Para tarifas no reembolsables, se aplican penalizaciones según las condiciones del contrato."
+  },
+  {
+    "question": "¿Qué documentación necesito para viajar al extranjero?",
+    "answer": "Para destinos de la Unión Europea es suficiente el DNI en vigor. Para destinos fuera de la UE se requiere pasaporte con al menos 6 meses de validez desde la fecha de regreso. Algunos países exigen visado previo: consulta los requisitos específicos de tu destino con nuestro equipo. Recomendamos tramitar la documentación con al menos 4 semanas de antelación."
+  },
+  {
+    "question": "¿Cuándo recibiré mi bono de viaje?",
+    "answer": "El bono de viaje se envía por correo electrónico en un plazo máximo de 48 horas laborables tras la confirmación del pago completo. Si pasado ese plazo no lo has recibido, revisa la carpeta de spam y contacta con tu agente indicando el número de reserva."
+  },
+  {
+    "question": "¿Puedo modificar las fechas de mi reserva?",
+    "answer": "Sí, puedes solicitar un cambio de fechas sujeto a disponibilidad. Las modificaciones antes de 30 días del viaje están sujetas a las condiciones de la tarifa contratada. Si hay diferencia de precio en el nuevo período, se aplica el suplemento correspondiente. Para cambios de última hora (menos de 7 días), consulta directamente con tu agente."
+  },
+  {
+    "question": "¿Está incluido el seguro de viaje en mi reserva?",
+    "answer": "El seguro de viaje básico de asistencia en viaje está incluido en los paquetes turísticos completos. Para vuelos o alojamientos sueltos contratados por separado, el seguro no está incluido por defecto. Recomendamos contratar el seguro de cancelación para mayor cobertura; pregunta a tu agente por las opciones disponibles."
+  },
+  {
+    "question": "¿Qué incluye el paquete turístico?",
+    "answer": "Los paquetes turísticos incluyen vuelo de ida y vuelta, alojamiento en régimen según contrato (habitación y desayuno, media pensión o pensión completa), traslado aeropuerto-hotel-aeropuerto, y asistencia en viaje 24 horas. Las excursiones opcionales, tasas turísticas locales y servicios adicionales no están incluidos salvo indicación expresa."
+  },
+  {
+    "question": "¿Puedo añadir equipaje adicional a mi vuelo?",
+    "answer": "Sí, es posible añadir maletas adicionales antes de la salida del vuelo. El coste varía según la compañía aérea y el destino. Para añadir equipaje, contacta con nosotros indicando tu número de reserva con al menos 72 horas de antelación. También puedes gestionarlo directamente en la web de la aerolínea con el localizador de vuelo."
+  },
+  {
+    "question": "¿Cómo puedo solicitar un menú especial en el vuelo?",
+    "answer": "Los menús especiales (vegetariano, vegano, sin gluten, kosher, halal, etc.) deben solicitarse con un mínimo de 72 horas antes del vuelo. Contacta con tu agente indicando tu número de reserva y el tipo de menú requerido para cada pasajero. No garantizamos la disponibilidad de menús especiales en vuelos de corta distancia o compañías de bajo coste."
+  },
+  {
+    "question": "¿Qué hago si mi vuelo se retrasa o cancela?",
+    "answer": "Ante un retraso o cancelación de vuelo, la aerolínea está obligada a ofrecerte asistencia (comida, comunicación) según el Reglamento CE 261/2004 si el vuelo parte de un aeropuerto europeo. Contacta inmediatamente con el número de asistencia 24h que aparece en tu bono de viaje. Guardamos toda la documentación para gestionar la reclamación de compensación correspondiente."
+  },
+  {
+    "question": "¿Cómo funciona el traslado al aeropuerto?",
+    "answer": "El servicio de traslado aeropuerto incluido en el paquete se realiza en autobús compartido o vehículo privado según el servicio contratado. Las instrucciones de punto y hora de recogida se detallan en el bono de viaje. Para traslados de regreso, confirma el horario con la agencia local en destino con 48 horas de antelación."
+  },
+  {
+    "question": "¿Puedo cambiar el nombre de un pasajero en la reserva?",
+    "answer": "Los cambios de nombre en billetes aéreos pueden implicar costes adicionales según la aerolínea, y en algunos casos no están permitidos. Los cambios en hotel son generalmente gratuitos con suficiente antelación. Contacta con tu agente indicando el número de reserva y el nombre correcto. Tasas de cambio de nombre oscilan entre 30 y 150 euros por pasajero dependiendo de la aerolínea."
+  },
+  {
+    "question": "¿Cuándo puedo hacer el check-in online?",
+    "answer": "El check-in online suele abrirse entre 48 y 24 horas antes de la salida del vuelo, según la compañía aérea. Tu agente te enviará el localizador de vuelo (PNR) con el que puedes acceder al check-in online directamente en la web de la aerolínea. Si tienes problemas para realizarlo, contacta con nosotros."
+  },
+  {
+    "question": "¿Qué vacunas necesito para mi destino?",
+    "answer": "Los requisitos de vacunación varían según el país de destino. Algunos destinos exigen vacunación obligatoria (por ejemplo, fiebre amarilla para varios países de África y Sudamérica). Recomendamos consultar con el Centro de Vacunación Internacional con al menos 6 semanas de antelación. Para información específica de tu destino, contacta con tu agente."
+  },
+  {
+    "question": "¿Cómo solicito un upgrade de habitación en el hotel?",
+    "answer": "Los upgrades de categoría están sujetos a disponibilidad en el momento del check-in. Puedes solicitarlo a tu agente antes del viaje para que lo comunique al hotel, o directamente en recepción al llegar. Los upgrades garantizados tienen un coste adicional; los solicitados en el momento de llegada pueden ser gratuitos o tener precio reducido dependiendo de la ocupación del hotel."
+  },
+  {
+    "question": "¿Puedo contratar solo el vuelo sin alojamiento?",
+    "answer": "Sí, ofrecemos vuelos sueltos sin alojamiento. Ten en cuenta que en este caso el seguro de viaje no está incluido y el precio puede ser superior al de un paquete completo. Consulta con tu agente las opciones disponibles para tu destino y fechas."
+  },
+  {
+    "question": "¿Cómo se realiza el pago de la reserva?",
+    "answer": "El proceso habitual es un depósito del 30% al confirmar la reserva y el pago del importe restante 30 días antes de la salida. Para reservas realizadas con menos de 30 días de antelación, se requiere el pago íntegro. Aceptamos tarjeta de crédito/débito, transferencia bancaria y en algunos casos financiación a plazos sin intereses."
+  },
+  {
+    "question": "¿Qué hago si pierdo el pasaporte en el extranjero?",
+    "answer": "Ante la pérdida o robo del pasaporte en el extranjero, debes acudir inmediatamente a la comisaría local para interponer una denuncia. Después contacta con el Consulado o Embajada española más cercana para obtener un documento de emergencia. Llama al número de asistencia 24h de tu bono de viaje para que nuestro equipo te asesore durante el proceso."
+  },
+  {
+    "question": "¿Cómo funciona el régimen de pensión completa?",
+    "answer": "La pensión completa incluye desayuno, almuerzo y cena en el hotel. Las bebidas pueden estar incluidas o no según el tipo de pensión completa contratada: pensión completa básica (agua y refrescos) o pensión completa con bebidas. Las bebidas alcohólicas de importación y los extras como minibar o servicio de habitaciones nunca están incluidos."
+  },
+  {
+    "question": "¿Qué es el all inclusive?",
+    "answer": "El régimen all inclusive incluye todas las comidas, bebidas locales e internacionales (dentro del horario establecido por el hotel), snacks entre horas, actividades deportivas no motorizadas y entretenimiento del hotel. Los servicios de spa, excursiones externas, restaurantes a la carta con reserva previa y bebidas de alta gama suelen tener coste adicional."
+  },
+  {
+    "question": "¿Puedo llevar a mis hijos en el viaje?",
+    "answer": "Sí, organizamos viajes familiares. Los menores de 2 años viajan en avión sin asiento propio a un precio reducido (tasas únicamente). De 2 a 11 años se aplican tarifas de niño con descuento en vuelo y hotel. Para menores que viajan acompañados de un solo progenitor pueden requerirse documentos adicionales según el país de destino."
+  },
+  {
+    "question": "¿Qué es el localizador de reserva?",
+    "answer": "El localizador de reserva (también llamado número de referencia de reserva o código de confirmación) es un código alfanumérico único que identifica tu reserva en nuestros sistemas. Lo encontrarás en el email de confirmación y en el bono de viaje. Necesitarás este código para cualquier consulta o modificación."
+  },
+  {
+    "question": "¿Puedo personalizar un viaje a medida?",
+    "answer": "Sí, ofrecemos viajes a medida para grupos privados, viajes de empresa, incentivos y lunas de miel. Contacta con un agente especializado en viajes a medida para recibir una propuesta personalizada sin compromiso. Para grupos de 10 o más personas también disponemos de condiciones especiales."
+  },
+  {
+    "question": "¿Qué ocurre si el hotel no tiene mi reserva al llegar?",
+    "answer": "Llama inmediatamente al número de asistencia 24h de tu bono de viaje. Nuestro equipo contactará con el hotel para resolver la situación o buscará alojamiento alternativo de categoría igual o superior sin coste adicional para ti. Conserva siempre una copia del bono de viaje con el número de confirmación del hotel."
+  },
+  {
+    "question": "¿Con cuánta antelación debo llegar al aeropuerto?",
+    "answer": "Recomendamos llegar al aeropuerto con 2 horas de antelación para vuelos nacionales y 3 horas para vuelos internacionales. En aeropuertos con alta afluencia de pasajeros o en temporada alta, incrementa estos tiempos en 30-60 minutos. El tiempo exacto de facturación de tu vuelo está indicado en el bono de viaje."
+  },
+  {
+    "question": "¿Cómo puedo contactar con vosotros si tengo una urgencia durante el viaje?",
+    "answer": "Dispones de un número de asistencia 24 horas disponible los 365 días del año que encontrarás en tu bono de viaje. También puedes contactar por WhatsApp o email de urgencias. Para emergencias médicas o de seguridad en destino, llama siempre primero al número de emergencias local (112 en Europa)."
+  }
+]

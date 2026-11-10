@@ -1,0 +1,49 @@
+{
+  "cases": 125,
+  "distractors": 70,
+  "by_split_type": {
+    "dev/abstention": 5,
+    "dev/extraction": 5,
+    "dev/knowledge_update": 5,
+    "dev/multi_session": 5,
+    "dev/temporal": 5,
+    "test/abstention": 20,
+    "test/extraction": 20,
+    "test/knowledge_update": 20,
+    "test/multi_session": 20,
+    "test/temporal": 20
+  },
+  "by_intent": {
+    "atención de incidencias": 12,
+    "búsqueda de paquetes vacacionales": 13,
+    "consulta sobre destinos turísticos": 12,
+    "documentación de viaje": 13,
+    "gestión de reservas": 12,
+    "modificación de vuelos u hospedaje": 12,
+    "pagos y facturación": 12,
+    "recomendaciones personalizadas": 13,
+    "seguimiento de itinerarios": 13,
+    "soporte postventa": 13
+  },
+  "invalid_cases": {},
+  "invalid_distractors": {},
+  "duplicated_ids": [],
+  "similarity": {
+    "method": "tfidf",
+    "threshold": 0.4,
+    "pairs": 7750,
+    "mean": 0.08682604290799538,
+    "p50": 0.07413179872489087,
+    "p90": 0.15911316602505604,
+    "p95": 0.19544440321596968,
+    "max": 0.38863992441306205,
+    "over_threshold": 0,
+    "top_pairs": []
+  },
+  "instantiation_errors": {},
+  "review_sample": {
+    "path": "app/data/eval_dataset/review_sample.csv",
+    "size": 25
+  },
+  "regenerate": []
+}

@@ -1,0 +1,23 @@
+{
+  "labels_file": "artifacts/eval_runs/final/human_sample.csv",
+  "labelled": 50,
+  "incomplete": 0,
+  "annotators": 2,
+  "humans": {
+    "n": 50,
+    "agreement": 0.98,
+    "kappa": 0.9547920433996383
+  },
+  "human_disagreements": [
+    "C0|20|1|test-abstention-015"
+  ],
+  "consensus_items": 49,
+  "judges": {
+    "deepseek:deepseek-v4-pro": {
+      "n": 49,
+      "agreement": 1.0,
+      "kappa": 1.0,
+      "passes": true
+    }
+  }
+}

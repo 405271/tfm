@@ -1,0 +1,79 @@
+{
+  "domain_name": "generic",
+  "terms": {
+    "incident": "incidencia",
+    "request": "solicitud",
+    "ticket": "ticket",
+    "ref_incident": "INC",
+    "ref_request": "SOL",
+    "ref_ticket": "TKT",
+    "ref_incident_label": "incidencia",
+    "ref_request_label": "solicitud",
+    "ref_ticket_label": "ticket"
+  },
+  "companies": [
+    "TechStart S.L.", "Innovatech S.A.", "DataSys Group", "NetCore Solutions",
+    "DigitalPro S.L.", "SoftWave Technologies", "Grupo Nexus", "Apex Systems",
+    "BlueSoft Consulting", "CloudBase S.A.", "OmegaData S.L.", "FutureLab Group",
+    "InnoSoft Iberia", "PrimeCode S.L.", "AlphaNet Systems"
+  ],
+  "roles": [
+    "responsable de sistemas", "directora de operaciones", "jefe de proyecto",
+    "administrador de TI", "coordinadora técnica", "analista de datos",
+    "responsable de soporte", "gerente de plataformas", "técnico de infraestructura"
+  ],
+  "topics_pairs": [
+    {
+      "a": {"label": "exportación de datos en formato CSV", "key": "exportación", "keywords": ["exportación", "csv", "datos"]},
+      "b": {"label": "configuración de alertas por correo", "key": "alertas", "keywords": ["alertas", "correo", "notificaciones"]}
+    },
+    {
+      "a": {"label": "proceso de alta de nuevos usuarios", "key": "alta de usuarios", "keywords": ["alta", "usuarios", "registro"]},
+      "b": {"label": "configuración de permisos de acceso", "key": "permisos", "keywords": ["permisos", "acceso", "roles"]}
+    },
+    {
+      "a": {"label": "integración con sistemas externos via API", "key": "API", "keywords": ["api", "integración", "conexión"]},
+      "b": {"label": "generación de informes automáticos", "key": "informes", "keywords": ["informes", "reportes", "generación"]}
+    },
+    {
+      "a": {"label": "proceso de renovación de licencias", "key": "renovación", "keywords": ["renovación", "licencia", "contrato"]},
+      "b": {"label": "configuración de copias de seguridad", "key": "copias de seguridad", "keywords": ["copia", "backup", "respaldo"]}
+    },
+    {
+      "a": {"label": "gestión de tickets de soporte", "key": "tickets", "keywords": ["ticket", "soporte", "incidencia"]},
+      "b": {"label": "monitorización del estado del sistema", "key": "monitorización", "keywords": ["monitorización", "estado", "dashboard"]}
+    },
+    {
+      "a": {"label": "proceso de importación masiva de datos", "key": "importación", "keywords": ["importación", "carga", "datos"]},
+      "b": {"label": "configuración de autenticación de dos factores", "key": "2FA", "keywords": ["autenticación", "2fa", "seguridad"]}
+    },
+    {
+      "a": {"label": "descarga de facturas y documentos", "key": "facturas", "keywords": ["facturas", "documentos", "descarga"]},
+      "b": {"label": "personalización del panel de control", "key": "panel", "keywords": ["panel", "dashboard", "personalización"]}
+    },
+    {
+      "a": {"label": "solicitud de cambio de plan de servicio", "key": "plan", "keywords": ["plan", "tarifa", "servicio"]},
+      "b": {"label": "configuración de notificaciones push", "key": "notificaciones", "keywords": ["notificaciones", "push", "avisos"]}
+    },
+    {
+      "a": {"label": "proceso de cancelación de cuenta", "key": "cancelación", "keywords": ["cancelación", "baja", "cuenta"]},
+      "b": {"label": "migración de datos entre cuentas", "key": "migración", "keywords": ["migración", "traslado", "datos"]}
+    },
+    {
+      "a": {"label": "recuperación de contraseña olvidada", "key": "contraseña", "keywords": ["contraseña", "acceso", "recuperación"]},
+      "b": {"label": "activación del módulo de facturación", "key": "facturación", "keywords": ["facturación", "módulo", "activación"]}
+    }
+  ],
+  "abstractions": [
+    {"datum": "número de teléfono de contacto", "forbidden": ["teléfono registrado es", "número de contacto es", "tu número es", "su teléfono"]},
+    {"datum": "dirección de correo personal", "forbidden": ["correo es", "email personal es", "tu email es", "correo registrado"]},
+    {"datum": "número de DNI o NIF", "forbidden": ["DNI es", "NIF es", "documento es", "identificación es"]},
+    {"datum": "nombre de usuario del sistema", "forbidden": ["usuario es", "login es", "tu usuario del sistema es"]},
+    {"datum": "dirección postal", "forbidden": ["dirección es", "calle es", "tu domicilio es"]},
+    {"datum": "número de cuenta bancaria", "forbidden": ["cuenta es", "IBAN es", "número de cuenta es"]},
+    {"datum": "nombre del responsable de facturación", "forbidden": ["responsable de facturación es", "contacto de facturación es"]},
+    {"datum": "código postal registrado", "forbidden": ["código postal es", "CP es", "tu código postal"]},
+    {"datum": "fecha de nacimiento", "forbidden": ["fecha de nacimiento es", "naciste el", "cumpleaños es"]},
+    {"datum": "clave de acceso actual", "forbidden": ["contraseña es", "clave es", "password es"]}
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "info": {
+    "source": "judge",
+    "rows": 3000,
+    "unjudged_or_pending": 0
+  },
+  "main_length": 20,
+  "lengths": [
+    5,
+    20
+  ],
+  "conditions": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "accuracy": {
+    "run_variation": {
+      "C0": {
+        "per_run": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "mean": 0.20000000000000004,
+        "sd": 3.3993498887762956e-17
+      },
+      "C1": {
+        "per_run": [
+          0.97,
+          0.97,
+          0.95
+        ],
+        "mean": 0.9633333333333333,
+        "sd": 0.011547005383792525
+      },
+      "C2": {
+        "per_run": [
+          0.4,
+          0.41,
+          0.41
+        ],
+        "mean": 0.4066666666666667,
+        "sd": 0.005773502691896231
+      },
+      "C3": {
+        "per_run": [
+          0.86,
+          0.87,
+          0.89
+        ],
+        "mean": 0.8733333333333334,
+        "sd": 0.01527525231651948
+      },
+      "C4": {
+        "per_run": [
+          0.98,
+          0.99,
+          0.96
+        ],
+        "mean": 0.9766666666666666,
+        "sd": 0.01527525231651948
+      }
+    },
+    "comparisons": {
+      "C0": {
+        "n": 100,
+        "diff": 0.6699999999999999,
+        "ci": [
+          0.57,
+          0.76
+        ],
+        "p": 2.371692252312041e-19,
+        "acc_a": 0.87,
+        "acc_b": 0.2,
+        "p_holm": 7.115076756936123e-19
+      },
+      "C2": {
+        "n": 100,
+        "diff": 0.46,
+        "ci": [
+          0.35,
+          0.57
+        ],
+        "p": 1.042677055806962e-11,
+        "acc_a": 0.87,
+        "acc_b": 0.41,
+        "p_holm": 2.085354111613924e-11
+      },
+      "C1": {
+        "n": 100,
+        "diff": -0.08999999999999997,
+        "ci": [
+          -0.16,
+          -0.03
+        ],
+        "p": 0.0224609375,
+        "acc_a": 0.87,
+        "acc_b": 0.96,
+        "p_holm": 0.0224609375
+      }
+    },
+    "h2": {
+      "diff": 0.9,
+      "n": 40,
+      "acc_a": 0.9,
+      "acc_b": 0.0
+    },
+    "table": {
+      "extraction": {
+        "C0": {
+          "accuracy": 0.0,
+          "n": 20
+        },
+        "C1": {
+          "accuracy": 1.0,
+          "n": 20
+        },
+        "C2": {
+          "accuracy": 0.45,
+          "n": 20
+        },
+        "C3": {
+          "accuracy": 0.85,
+          "n": 20
+        },
+        "C4": {
+          "accuracy": 1.0,
+          "n": 20
+        }
+      },
+      "multi_session": {
+        "C0": {
+          "accuracy": 0.0,
+          "n": 20
+        },
+        "C1": {
+          "accuracy": 0.9,
+          "n": 20
+        },
+        "C2": {
+          "accuracy": 0.05,
+          "n": 20
+        },
+        "C3": {
+          "accuracy": 0.9,
+          "n": 20
+        },
+        "C4": {
+          "accuracy": 0.95,
+          "n": 20
+        }
+      },
+      "temporal": {
+        "C0": {
+          "accuracy": 0.0,
+          "n": 20
+        },
+        "C1": {
+          "accuracy": 0.9,
+          "n": 20
+        },
+        "C2": {
+          "accuracy": 0.35,
+          "n": 20
+        },
+        "C3": {
+          "accuracy": 0.75,
+          "n": 20
+        },
+        "C4": {
+          "accuracy": 1.0,
+          "n": 20
+        }
+      },
+      "knowledge_update": {
+        "C0": {
+          "accuracy": 0.0,
+          "n": 20
+        },
+        "C1": {
+          "accuracy": 1.0,
+          "n": 20
+        },
+        "C2": {
+          "accuracy": 0.2,
+          "n": 20
+        },
+        "C3": {
+          "accuracy": 0.9,
+          "n": 20
+        },
+        "C4": {
+          "accuracy": 1.0,
+          "n": 20
+        }
+      },
+      "abstention": {
+        "C0": {
+          "accuracy": 1.0,
+          "n": 20
+        },
+        "C1": {
+          "accuracy": 1.0,
+          "n": 20
+        },
+        "C2": {
+          "accuracy": 1.0,
+          "n": 20
+        },
+        "C3": {
+          "accuracy": 0.95,
+          "n": 20
+        },
+        "C4": {
+          "accuracy": 1.0,
+          "n": 20
+        }
+      }
+    },
+    "global_": {
+      "C0": {
+        "accuracy": 0.2,
+        "n": 100
+      },
+      "C1": {
+        "accuracy": 0.96,
+        "n": 100
+      },
+      "C2": {
+        "accuracy": 0.41,
+        "n": 100
+      },
+      "C3": {
+        "accuracy": 0.87,
+        "n": 100
+      },
+      "C4": {
+        "accuracy": 0.99,
+        "n": 100
+      }
+    },
+    "h3": {
+      "5": {
+        "n": 100,
+        "diff": -0.07999999999999996,
+        "ci": [
+          -0.14,
+          -0.02
+        ],
+        "p": 0.021484375,
+        "acc_a": 0.89,
+        "acc_b": 0.97,
+        "reading": "Ventaja de C1"
+      },
+      "20": {
+        "n": 100,
+        "diff": -0.08999999999999997,
+        "ci": [
+          -0.16,
+          -0.03
+        ],
+        "p": 0.0224609375,
+        "acc_a": 0.87,
+        "acc_b": 0.96,
+        "reading": "Ventaja de C1"
+      }
+    }
+  },
+  "recall_tokens": {
+    "recall": {
+      "C2": {
+        "5": {
+          "recall": 0.375,
+          "n": 80
+        },
+        "20": {
+          "recall": 0.25,
+          "n": 80
+        }
+      },
+      "C3": {
+        "5": {
+          "recall": 0.7875,
+          "n": 80
+        },
+        "20": {
+          "recall": 0.7875,
+          "n": 80
+        }
+      }
+    },
+    "tokens": {
+      "C0": {
+        "5": {
+          "input": 1095.78
+        },
+        "20": {
+          "input": 1095.78
+        }
+      },
+      "C1": {
+        "5": {
+          "input": 3067.32
+        },
+        "20": {
+          "input": 9348.81
+        }
+      },
+      "C2": {
+        "5": {
+          "input": 1348.47
+        },
+        "20": {
+          "input": 1359.33
+        }
+      },
+      "C3": {
+        "5": {
+          "input": 1411.28
+        },
+        "20": {
+          "input": 1411.28
+        }
+      },
+      "C4": {
+        "5": {
+          "input": 1639.44
+        },
+        "20": {
+          "input": 1639.44
+        }
+      },
+      "C3_write_per_turn": {
+        "5": 307.05240094942485,
+        "20": 308.04277613971425
+      }
+    }
+  },
+  "simulation": {
+    "tasks": 60,
+    "conditions": {
+      "C0": {
+        "rr_pooled": 0.3076923076923077,
+        "rr_mean": 0.31367063492063496,
+        "str_mean": 5.066666666666666,
+        "completion": 0.8666666666666667
+      },
+      "C3": {
+        "rr_pooled": 0.1099290780141844,
+        "rr_mean": 0.10764550264550264,
+        "str_mean": 3.6555555555555554,
+        "completion": 0.9555555555555556
+      }
+    },
+    "reductions": {
+      "rr": {
+        "relative": 0.6568199548780231,
+        "ci": [
+          0.5224279059884712,
+          0.7737916891159312
+        ]
+      },
+      "str": {
+        "relative": 0.27850877192982426
+      }
+    }
+  },
+  "longmemeval": {
+    "global": {
+      "C0": {
+        "accuracy": 0.21666666666666667,
+        "n": 60
+      },
+      "C1": {
+        "accuracy": 0.7333333333333333,
+        "n": 60
+      },
+      "C3": {
+        "accuracy": 0.65,
+        "n": 60
+      },
+      "C4": {
+        "accuracy": 0.7166666666666667,
+        "n": 60
+      }
+    },
+    "c3_vs_c1": {
+      "n": 60,
+      "diff": -0.08333333333333333
+    },
+    "n": 60
+  },
+  "latency_files": [
+    "offload",
+    "sync"
+  ],
+  "objectives": [
+    {
+      "objetivo": "Exactitud mayor que stateless (H2 global)",
+      "resultado": "+67.0 pp (p Holm < 0.001)",
+      "estado": "Cumplido"
+    },
+    {
+      "objetivo": "Ventaja frente a contexto completo (H3)",
+      "resultado": "5 sesiones: -8.0 pp (ventaja de C1); 20 sesiones: -9.0 pp (ventaja de C1)",
+      "estado": "No cumplido"
+    },
+    {
+      "objetivo": "Reducción de RR ≥ 25 % (H1)",
+      "resultado": "65.7 %",
+      "estado": "Cumplido (dentro o por encima del valor esperado)"
+    },
+    {
+      "objetivo": "Reducción de STR ≥ 25 %",
+      "resultado": "27.9 %",
+      "estado": "Cumplido"
+    },
+    {
+      "objetivo": "Recall@5 ≥ 90 %",
+      "resultado": "78.8 % (20 sesiones)",
+      "estado": "No cumplido"
+    },
+    {
+      "objetivo": "Latencia p95 de recuperación < 300 ms (H4)",
+      "resultado": "offload: cumple en concurrencia 1, 5, 10, 20; sync: cumple en concurrencia 1, 5, 10, 20",
+      "estado": "Cumplido"
+    },
+    {
+      "objetivo": "Similitud entre escenarios < 0.4",
+      "resultado": "Máximo 0.39 (tfidf); 0 pares por encima",
+      "estado": "Cumplido"
+    },
+    {
+      "objetivo": "Acuerdo juez-humano ≥ 90 %",
+      "resultado": "deepseek:deepseek-v4-pro: 100.0 % (κ = 1.00, n = 49)",
+      "estado": "Cumplido"
+    },
+    {
+      "objetivo": "Validación externa, LongMemEval-S (60 preguntas)",
+      "resultado": "C0 21.7 %, C1 73.3 %, C3 65.0 %, C4 71.7 %",
+      "estado": "Orientativa: RMM reporta 70.4 % con otro recuperador y otro juez (Tan, Z. et al., 2025)"
+    }
+  ]
+}

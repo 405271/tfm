@@ -1,0 +1,161 @@
+{
+  "label": "sync",
+  "offload_sync": false,
+  "started_at": "2026-11-10T16:19:08.417154+00:00",
+  "git": "d488a02e79c9b4bca59767cb0e5fcfd8ce917bff-dirty",
+  "entities": 10,
+  "history_length": 20,
+  "requests_per_level": 200,
+  "threshold_ms": 300.0,
+  "health": {
+    "status": "ok",
+    "rag_index_loaded": "yes",
+    "eval": {
+      "memori_enabled": true,
+      "llm_provider": "openai",
+      "llm_model": "gpt-6-luna",
+      "llm_temperature": 0.0,
+      "llm_reasoning_effort": "none",
+      "memori_fact_language": "es",
+      "memori_offload_sync": false,
+      "memori_db_pool": "null",
+      "prompt_profile": "support",
+      "issue_context_enabled": false,
+      "escalation_enabled": false,
+      "faq_entries": 0,
+      "glossary_entries": 0,
+      "memory_failures": {
+        "extraction": 0,
+        "embedding": 0,
+        "write": 0,
+        "recall": 0
+      }
+    }
+  },
+  "levels": {
+    "1": {
+      "retrieval": {
+        "p50": 35.555,
+        "p95": 45.37899999999999,
+        "mean": 34.291599999999995,
+        "n": 200
+      },
+      "generation": {
+        "p50": 1719.605,
+        "p95": 4309.755499999999,
+        "mean": 2086.83785,
+        "n": 200
+      },
+      "memory_write": {
+        "p50": 26.84,
+        "p95": 2446.3889999999997,
+        "mean": 511.49830000000003,
+        "n": 200
+      },
+      "total": {
+        "p50": 1842.1911305049434,
+        "p95": 5928.686163685051,
+        "mean": 2638.579689154867,
+        "n": 200
+      },
+      "errors": 0,
+      "memory_failures": 0,
+      "server_blocked": false,
+      "throughput_rps": 0.37899050661206013,
+      "retrieval_p95_ok": true
+    },
+    "5": {
+      "retrieval": {
+        "p50": 15.945,
+        "p95": 44.594999999999956,
+        "mean": 20.93265,
+        "n": 200
+      },
+      "generation": {
+        "p50": 1968.79,
+        "p95": 4228.550999999995,
+        "mean": 2241.8061000000002,
+        "n": 200
+      },
+      "memory_write": {
+        "p50": 342.36,
+        "p95": 2314.5559999999978,
+        "mean": 568.3325500000001,
+        "n": 200
+      },
+      "total": {
+        "p50": 2409.0751809999347,
+        "p95": 5535.644249696632,
+        "mean": 2866.3278639651253,
+        "n": 200
+      },
+      "errors": 0,
+      "memory_failures": 0,
+      "server_blocked": false,
+      "throughput_rps": 1.7200011206641506,
+      "retrieval_p95_ok": true
+    },
+    "10": {
+      "retrieval": {
+        "p50": 13.43,
+        "p95": 34.50899999999995,
+        "mean": 17.407,
+        "n": 200
+      },
+      "generation": {
+        "p50": 3075.455,
+        "p95": 5472.843999999998,
+        "mean": 3299.2887,
+        "n": 200
+      },
+      "memory_write": {
+        "p50": 411.855,
+        "p95": 2972.7464999999984,
+        "mean": 659.33075,
+        "n": 200
+      },
+      "total": {
+        "p50": 3659.8346029932145,
+        "p95": 7310.59941880521,
+        "mean": 4095.699872134428,
+        "n": 200
+      },
+      "errors": 0,
+      "memory_failures": 0,
+      "server_blocked": false,
+      "throughput_rps": 2.3906207779274724,
+      "retrieval_p95_ok": true
+    },
+    "20": {
+      "retrieval": {
+        "p50": 12.35,
+        "p95": 27.03699999999998,
+        "mean": 14.583699999999999,
+        "n": 200
+      },
+      "generation": {
+        "p50": 5753.215,
+        "p95": 9569.973499999998,
+        "mean": 6023.71815,
+        "n": 200
+      },
+      "memory_write": {
+        "p50": 336.24,
+        "p95": 5375.986499999998,
+        "mean": 876.8584,
+        "n": 200
+      },
+      "total": {
+        "p50": 6559.1097784927115,
+        "p95": 13500.156957228319,
+        "mean": 7167.347428206122,
+        "n": 200
+      },
+      "errors": 0,
+      "memory_failures": 0,
+      "server_blocked": false,
+      "throughput_rps": 2.597272753664594,
+      "retrieval_p95_ok": true
+    }
+  }
+}

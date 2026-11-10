@@ -16,15 +16,39 @@ st.set_page_config(page_title="Chat", page_icon="💬", layout="centered")
 st.title("Chat")
 st.caption("Frontend en Streamlit")
 
+# ── Sidebar: identidad y control de sesión ──────────────────────────────────
+with st.sidebar:
+    st.header("Configuración")
+
+    entity_id = st.text_input(
+        "ID de usuario (entity_id)",
+        value=st.session_state.get("entity_id", "usuario-demo"),
+        help="Identificador estable del usuario. Mantenerlo igual entre sesiones activa la memoria cross-session.",
+    )
+    st.session_state["entity_id"] = entity_id
+
+    st.divider()
+
+    if st.button("🔄 Nueva sesión", use_container_width=True, help="Borra el historial y genera un nuevo session_id, simulando que el usuario vuelve desde cero."):
+        st.session_state.messages = []
+        st.session_state.session_id = str(uuid4())
+        st.success("Nueva sesión iniciada.")
+        st.rerun()
+
+    st.caption(f"Session ID: `{st.session_state.get('session_id', '—')[:8]}…`")
+
+# ── Estado inicial ───────────────────────────────────────────────────────────
 if "messages" not in st.session_state:
     st.session_state.messages = []
 if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid4())
 
+# ── Historial ────────────────────────────────────────────────────────────────
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
+# ── Input ────────────────────────────────────────────────────────────────────
 if prompt := st.chat_input("Escribe tu mensaje"):
     st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -34,6 +58,7 @@ if prompt := st.chat_input("Escribe tu mensaje"):
     payload = {
         "message": prompt,
         "session_id": st.session_state.session_id,
+        "entity_id": st.session_state["entity_id"],
         "history": st.session_state.messages[:-1],
     }
 
@@ -47,10 +72,15 @@ if prompt := st.chat_input("Escribe tu mensaje"):
                 answer = data["reply"]
                 st.markdown(answer)
                 if data.get("sources"):
+                    def _short_url(url: str) -> str:
+                        from pathlib import Path, PurePosixPath
+                        if url.startswith("file://"):
+                            return Path(url[7:]).name
+                        return url
                     st.caption(
                         "Fuentes: "
                         + " | ".join(
-                            f"{item['title']} - {item['url']}" for item in data["sources"][:3]
+                            f"{item['title']} ({_short_url(item['url'])})" for item in data["sources"][:3]
                         )
                     )
                 if data.get("escalated"):

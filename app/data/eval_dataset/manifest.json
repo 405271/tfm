@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-11-10T03:41:56.394126+00:00",
+  "generator_model": "gpt-6.1-terra",
+  "generator_params": {},
+  "seed": 42,
+  "min_turns": 10,
+  "max_turns": 14,
+  "planned": {
+    "test_per_type": 20,
+    "dev_per_type": 5,
+    "distractors": 70
+  },
+  "counts": {
+    "cases": 125,
+    "by_split_type": {
+      "test/extraction": 20,
+      "test/multi_session": 20,
+      "test/temporal": 20,
+      "test/knowledge_update": 20,
+      "test/abstention": 20,
+      "dev/extraction": 5,
+      "dev/multi_session": 5,
+      "dev/temporal": 5,
+      "dev/knowledge_update": 5,
+      "dev/abstention": 5
+    },
+    "distractors": 70
+  },
+  "usage_this_run": {
+    "input_tokens": 875,
+    "output_tokens": 1995,
+    "calls": 1
+  }
+}

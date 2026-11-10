@@ -1,0 +1,81 @@
+{
+  "domain_name": "travel_agency",
+  "terms": {
+    "incident": "incidencia",
+    "request": "reserva",
+    "ticket": "bono",
+    "ref_incident": "INC",
+    "ref_request": "RES",
+    "ref_ticket": "BON",
+    "ref_incident_label": "incidencia",
+    "ref_request_label": "reserva",
+    "ref_ticket_label": "bono de viaje"
+  },
+  "companies": [
+    "Viajes Express S.L.", "TurAventura S.A.", "Grupo Rumbo Viajes", "Escapadas Premium S.L.",
+    "ViajesGlobal S.A.", "Destinos del Mundo S.L.", "Tour Experience Group",
+    "Horizonte Viajes S.A.", "Planeta Turístico S.L.", "ActiveTravel S.L.",
+    "SolMar Vacaciones S.A.", "Meridian Tours S.L.", "Ibérica Viajes Group",
+    "EcoTravel Solutions S.L.", "Nomad Experience S.A."
+  ],
+  "roles": [
+    "agente de viajes", "coordinadora de grupos", "responsable de reservas corporativas",
+    "gestora de cuentas", "director de operaciones de viaje", "consultor de viajes de lujo",
+    "responsable de viajes de incentivo", "técnica de destinos internacionales",
+    "coordinador de viajes de empresa"
+  ],
+  "topics_pairs": [
+    {
+      "a": {"label": "cancelación del vuelo de ida", "key": "cancelación del vuelo", "keywords": ["cancelación", "vuelo", "ida"]},
+      "b": {"label": "cambio de fechas de la reserva", "key": "cambio de fechas", "keywords": ["fechas", "cambio", "modificación"]}
+    },
+    {
+      "a": {"label": "upgrade de categoría de hotel", "key": "upgrade de hotel", "keywords": ["upgrade", "hotel", "categoría"]},
+      "b": {"label": "inclusión de seguro de cancelación", "key": "seguro", "keywords": ["seguro", "cancelación", "cobertura"]}
+    },
+    {
+      "a": {"label": "traslado aeropuerto incluido en el paquete", "key": "traslado", "keywords": ["traslado", "aeropuerto", "transfer"]},
+      "b": {"label": "excursiones opcionales disponibles en destino", "key": "excursiones", "keywords": ["excursiones", "actividades", "tours"]}
+    },
+    {
+      "a": {"label": "facturación de equipaje adicional", "key": "equipaje", "keywords": ["equipaje", "maleta", "facturación"]},
+      "b": {"label": "solicitud de menú especial en el vuelo", "key": "menú especial", "keywords": ["menú", "vuelo", "alimentación"]}
+    },
+    {
+      "a": {"label": "reembolso por cancelación anticipada", "key": "reembolso", "keywords": ["reembolso", "devolución", "cancelación"]},
+      "b": {"label": "modificación de nombre en la reserva", "key": "cambio de nombre", "keywords": ["nombre", "modificación", "reserva"]}
+    },
+    {
+      "a": {"label": "visado requerido para el destino", "key": "visado", "keywords": ["visado", "visa", "documentación"]},
+      "b": {"label": "vacunas obligatorias para el viaje", "key": "vacunas", "keywords": ["vacunas", "sanitarias", "salud"]}
+    },
+    {
+      "a": {"label": "régimen de pensión completa en el hotel", "key": "pensión completa", "keywords": ["pensión", "completa", "media pensión"]},
+      "b": {"label": "alquiler de vehículo en destino", "key": "alquiler de coche", "keywords": ["alquiler", "coche", "vehículo"]}
+    },
+    {
+      "a": {"label": "gestión de la baja médica durante el viaje", "key": "baja médica", "keywords": ["médica", "baja", "emergencia"]},
+      "b": {"label": "extensión de estancia en el hotel", "key": "extensión de estancia", "keywords": ["extensión", "estancia", "días"]}
+    },
+    {
+      "a": {"label": "reserva de habitación con vistas al mar", "key": "vistas al mar", "keywords": ["vistas", "mar", "habitación"]},
+      "b": {"label": "programa de actividades para grupos", "key": "programa de actividades", "keywords": ["programa", "actividades", "grupo"]}
+    },
+    {
+      "a": {"label": "tarjeta de embarque perdida o dañada", "key": "tarjeta de embarque", "keywords": ["tarjeta", "embarque", "boarding"]},
+      "b": {"label": "reclamación por vuelo con retraso", "key": "retraso del vuelo", "keywords": ["retraso", "vuelo", "compensación"]}
+    }
+  ],
+  "abstractions": [
+    {"datum": "número de pasaporte", "forbidden": ["pasaporte es", "tu pasaporte", "número de pasaporte es", "documento es"]},
+    {"datum": "fecha de caducidad del pasaporte", "forbidden": ["caduca el", "vence el", "caducidad es", "expira"]},
+    {"datum": "número de asiento asignado en el vuelo", "forbidden": ["asiento es", "tu asiento", "fila es", "número de asiento"]},
+    {"datum": "código de reserva del hotel", "forbidden": ["código del hotel es", "localizador del hotel es", "reserva hotel es"]},
+    {"datum": "número de vuelo de regreso", "forbidden": ["vuelo de regreso es", "número de vuelo es", "vuelta es"]},
+    {"datum": "fecha exacta de salida del viaje", "forbidden": ["sales el", "fecha de salida es", "salida es el", "vuelas el"]},
+    {"datum": "destino del próximo viaje contratado", "forbidden": ["vas a", "destino es", "próximo viaje es", "viajas a"]},
+    {"datum": "nombre del acompañante registrado", "forbidden": ["acompañante es", "acompaña es", "viaja con"]},
+    {"datum": "datos de la tarjeta de crédito utilizada", "forbidden": ["tarjeta es", "número de tarjeta", "crédito utilizado"]},
+    {"datum": "código localizador del vuelo de ida", "forbidden": ["localizador es", "PNR es", "código del vuelo es", "referencia del vuelo"]}
+  ]
+}

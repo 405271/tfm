@@ -1,0 +1,194 @@
+[
+  {
+    "id": "single-session-001",
+    "type": "single_session_recall",
+    "description": "Recall del numero de solicitud mencionado en el primer turno de la misma sesion",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, llamo por la solicitud numero SOL-2024-0178. Queria saber si hay novedades.",
+            "expect_escalated": false
+          },
+          {
+            "message": "¿Cuál era el número de solicitud que te indiqué al inicio de esta conversación?",
+            "expect_reply_contains": ["SOL-2024-0178"],
+            "expect_answer": "SOL-2024-0178",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cross-session-recall-001",
+    "type": "cross_session_recall",
+    "description": "El asistente debe recordar el nombre de empresa del usuario de una sesion anterior",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Buenos días. Soy Ana García de la empresa TechStart S.L. Tengo una consulta sobre el proceso de alta de cuenta corporativa."
+          },
+          {
+            "message": "Muchas gracias por la información, ya tengo todo claro."
+          }
+        ]
+      },
+      {
+        "label": "distractor",
+        "turns": [
+          {
+            "message": "¿Cuál es el horario habitual de atención al cliente?"
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, soy yo de nuevo. ¿Recuerdas a qué empresa pertenezco?",
+            "expect_reply_contains_any": ["techstart"],
+            "expect_reply_not_contains": ["no recuerdo", "no tengo información sobre tu empresa", "no dispongo de datos"],
+            "expect_answer": "TechStart",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cross-session-recall-002",
+    "type": "cross_session_recall",
+    "description": "Recall del numero de ticket mencionado en sesion previa sin historial",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, te escribo en relación al ticket TKT-20240315-0042 que abrimos la semana pasada. El equipo técnico nos dijo que seguía en revisión.",
+            "expect_escalated": false
+          },
+          {
+            "message": "De acuerdo, gracias. Estaré pendiente."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "¿Cuál era el número de ticket del que te hablé la última vez que contacté?",
+            "expect_reply_contains": ["TKT-20240315-0042"],
+            "expect_answer": "TKT-20240315-0042",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "knowledge-update-001",
+    "type": "knowledge_update",
+    "description": "El usuario actualiza el estado de un caso en sesion posterior y el asistente debe reflejar el cambio",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Hola, la incidencia INC-2024-0055 que teníamos pendiente sigue sin resolverse. El formulario de acceso da el mismo problema.",
+            "expect_escalated": false
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Buenas tardes. Solo quería avisarte de que la incidencia INC-2024-0055 ya quedó resuelta esta mañana. El equipo técnico lo arregló.",
+            "expect_escalated": false
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Sabes en qué estado quedó la incidencia INC-2024-0055?",
+            "expect_reply_contains_any": ["resuelta", "arreglada", "solucionada", "resuelto", "solucionó", "arregló"],
+            "expect_reply_not_contains": ["sin resolver", "pendiente", "sigue con el problema"],
+            "expect_answer": "resuelta",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "abstention-001",
+    "type": "abstention",
+    "description": "El asistente no debe inventar datos de contacto que nunca fueron proporcionados",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "¿Cuál es el proceso para solicitar una renovación de licencia?"
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi número de teléfono de contacto registrado en el sistema?",
+            "expect_reply_not_contains": [
+              "teléfono registrado es",
+              "número de contacto es",
+              "tu número es",
+              "su número es",
+              "tu teléfono es"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "temporal-order-001",
+    "type": "temporal_order",
+    "description": "El asistente identifica cuál fue el primer tema consultado entre dos sesiones distintas",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre cómo funciona la exportación de datos en formato CSV."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar cómo configurar las alertas por correo electrónico."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "¿Sobre qué tema te consulté primero: la exportación de datos o la configuración de alertas?",
+            "expect_reply_contains_any": ["exportación", "exportar", "csv", "datos"],
+            "expect_answer": "exportación de datos",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ]
+  }
+]

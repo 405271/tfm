@@ -1,0 +1,10 @@
+objetivo,resultado,estado
+Exactitud mayor que stateless (H2 global),+67.0 pp (p Holm < 0.001),Cumplido
+Ventaja frente a contexto completo (H3),5 sesiones: -8.0 pp (ventaja de C1); 20 sesiones: -9.0 pp (ventaja de C1),No cumplido
+Reducción de RR ≥ 25 % (H1),65.7 %,Cumplido (dentro o por encima del valor esperado)
+Reducción de STR ≥ 25 %,27.9 %,Cumplido
+Recall@5 ≥ 90 %,78.8 % (20 sesiones),No cumplido
+Latencia p95 de recuperación < 300 ms (H4),"offload: cumple en concurrencia 1, 5, 10, 20; sync: cumple en concurrencia 1, 5, 10, 20",Cumplido
+Similitud entre escenarios < 0.4,Máximo 0.39 (tfidf); 0 pares por encima,Cumplido
+Acuerdo juez-humano ≥ 90 %,"deepseek:deepseek-v4-pro: 100.0 % (κ = 1.00, n = 49)",Cumplido
+"Validación externa, LongMemEval-S (60 preguntas)","C0 21.7 %, C1 73.3 %, C3 65.0 %, C4 71.7 %","Orientativa: RMM reporta 70.4 % con otro recuperador y otro juez (Tan, Z. et al., 2025)"

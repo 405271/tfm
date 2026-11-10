@@ -1,0 +1,1705 @@
+[
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Buenos días, soy Juan Rodríguez de Viajes Express S.L.. Contacto por la reserva RES-2025-5012."
+          },
+          {
+            "message": "¿De qué empresa soy según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "viajes"
+            ],
+            "expect_answer": "Viajes Express S.L.",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-001",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, llamo en referencia a la reserva número RES-2024-2679. ¿Podéis indicarme su estado actual?"
+          },
+          {
+            "message": "¿Cuál era el número de reserva que te indiqué al inicio de esta conversación?",
+            "expect_reply_contains": [
+              "RES-2024-2679"
+            ],
+            "expect_answer": "RES-2024-2679",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-002",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Buenos días, soy Miguel Ramos de TurAventura S.A.. Contacto por la reserva RES-2025-1520."
+          },
+          {
+            "message": "¿De qué empresa soy según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "turaventura"
+            ],
+            "expect_answer": "TurAventura S.A.",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-003",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, llamo en referencia a la reserva número RES-2024-4582. ¿Podéis indicarme su estado actual?"
+          },
+          {
+            "message": "¿Cuál era el número de reserva que te indiqué al inicio de esta conversación?",
+            "expect_reply_contains": [
+              "RES-2024-4582"
+            ],
+            "expect_answer": "RES-2024-4582",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-004",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, llamo en referencia a la reserva número RES-2024-4257. ¿Podéis indicarme su estado actual?"
+          },
+          {
+            "message": "¿Cuál era el número de reserva que te indiqué al inicio de esta conversación?",
+            "expect_reply_contains": [
+              "RES-2024-4257"
+            ],
+            "expect_answer": "RES-2024-4257",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-005",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Buenos días, soy Miguel Ramos de Tour Experience Group. Contacto por la reserva RES-2024-8359."
+          },
+          {
+            "message": "¿De qué empresa soy según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "tour"
+            ],
+            "expect_answer": "Tour Experience Group",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-006",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Buenos días, soy Cristina Díaz de Ibérica Viajes Group. Contacto por la reserva RES-2024-3615."
+          },
+          {
+            "message": "¿De qué empresa soy según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "ibérica"
+            ],
+            "expect_answer": "Ibérica Viajes Group",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-007",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Buenos días, soy Roberto Flores de Destinos del Mundo S.L.. Contacto por la reserva RES-2025-3547."
+          },
+          {
+            "message": "¿De qué empresa soy según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "destinos"
+            ],
+            "expect_answer": "Destinos del Mundo S.L.",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-008",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, llamo en referencia a la reserva número RES-2025-2674. ¿Podéis indicarme su estado actual?"
+          },
+          {
+            "message": "¿Cuál era el número de reserva que te indiqué al inicio de esta conversación?",
+            "expect_reply_contains": [
+              "RES-2025-2674"
+            ],
+            "expect_answer": "RES-2025-2674",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-009",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "single_session_recall",
+    "sessions": [
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, llamo en referencia a la reserva número RES-2025-2584. ¿Podéis indicarme su estado actual?"
+          },
+          {
+            "message": "¿Cuál era el número de reserva que te indiqué al inicio de esta conversación?",
+            "expect_reply_contains": [
+              "RES-2025-2584"
+            ],
+            "expect_answer": "RES-2025-2584",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-single-session-recall-010",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Buenos días, me llamo Sergio Torres, soy director de operaciones de viaje en Ibérica Viajes Group. Consulto por la reserva RES-2024-8527."
+          },
+          {
+            "message": "Perfecto, muchas gracias por la atención."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, volvemos a hablar. ¿Recuerdas cuál es mi cargo?",
+            "expect_reply_contains_any": [
+              "director",
+              "operaciones"
+            ],
+            "expect_answer": "director de operaciones de viaje",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-001",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, soy Juan Rodríguez de TurAventura S.A.. Trabajo como responsable de viajes de incentivo. Os contacto por el bono de viaje BON-20241231-5803."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "¿Sabes cuál es mi cargo según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "responsable",
+              "viajes"
+            ],
+            "expect_answer": "responsable de viajes de incentivo",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-002",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, soy Sergio Torres de Meridian Tours S.L.. Trabajo como gestora de cuentas. Os contacto por el bono de viaje BON-20240243-1750."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "¿Sabes cuál es mi cargo según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "gestora",
+              "cuentas"
+            ],
+            "expect_answer": "gestora de cuentas",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-003",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, soy David González. Os escribo en relación al bono de viaje BON-20240693-2307 que tramitamos la semana pasada."
+          },
+          {
+            "message": "Quedamos en esperar confirmación del equipo. Gracias."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "¿Cuál era el número de bono de viaje del que te hablé en mi contacto anterior?",
+            "expect_reply_contains": [
+              "BON-20240693-2307"
+            ],
+            "expect_answer": "BON-20240693-2307",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-004",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, soy Patricia Hernández de ViajesGlobal S.A.. Quería consultar sobre el proceso de reserva."
+          },
+          {
+            "message": "Muchas gracias, ya entendí el proceso."
+          }
+        ]
+      },
+      {
+        "label": "distractor",
+        "turns": [
+          {
+            "message": "¿Cuál es el horario de atención al cliente?"
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, soy yo de nuevo. ¿Recuerdas a qué empresa pertenezco?",
+            "expect_reply_contains_any": [
+              "viajesglobal"
+            ],
+            "expect_reply_not_contains": [
+              "no recuerdo",
+              "no tengo información sobre tu empresa"
+            ],
+            "expect_answer": "ViajesGlobal S.A.",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-005",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Soy Sergio Torres y llamo por la reserva RES-2025-3664. El estado es pendiente de validación."
+          },
+          {
+            "message": "Gracias, espero la actualización."
+          }
+        ]
+      },
+      {
+        "label": "distractor",
+        "turns": [
+          {
+            "message": "¿Podéis explicarme cómo funciona el proceso de escalado de incidencias?"
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "¿Cuál era el número de reserva que te mencioné en mi última sesión?",
+            "expect_reply_contains": [
+              "RES-2025-3664"
+            ],
+            "expect_answer": "RES-2025-3664",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-006",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Buenos días, me llamo Isabel Jiménez, soy director de operaciones de viaje en Meridian Tours S.L.. Consulto por la reserva RES-2024-3803."
+          },
+          {
+            "message": "Perfecto, muchas gracias por la atención."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, volvemos a hablar. ¿Recuerdas cuál es mi cargo?",
+            "expect_reply_contains_any": [
+              "director",
+              "operaciones"
+            ],
+            "expect_answer": "director de operaciones de viaje",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-007",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, soy David González de Horizonte Viajes S.A.. Trabajo como responsable de reservas corporativas. Os contacto por el bono de viaje BON-20240878-5422."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "¿Sabes cuál es mi cargo según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "responsable",
+              "reservas"
+            ],
+            "expect_answer": "responsable de reservas corporativas",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-008",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, soy David González de EcoTravel Solutions S.L.. Trabajo como consultor de viajes de lujo. Os contacto por el bono de viaje BON-20240215-4752."
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "¿Sabes cuál es mi cargo según lo que te dije antes?",
+            "expect_reply_contains_any": [
+              "consultor",
+              "viajes"
+            ],
+            "expect_answer": "consultor de viajes de lujo",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-009",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "cross_session_recall",
+    "sessions": [
+      {
+        "label": "encoding",
+        "turns": [
+          {
+            "message": "Hola, soy Elena Ruiz de Tour Experience Group. Quería consultar sobre el proceso de reserva."
+          },
+          {
+            "message": "Muchas gracias, ya entendí el proceso."
+          }
+        ]
+      },
+      {
+        "label": "distractor",
+        "turns": [
+          {
+            "message": "¿Cuál es el horario de atención al cliente?"
+          }
+        ]
+      },
+      {
+        "label": "recall",
+        "turns": [
+          {
+            "message": "Hola, soy yo de nuevo. ¿Recuerdas a qué empresa pertenezco?",
+            "expect_reply_contains_any": [
+              "tour"
+            ],
+            "expect_reply_not_contains": [
+              "no recuerdo",
+              "no tengo información sobre tu empresa"
+            ],
+            "expect_answer": "Tour Experience Group",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-cross-session-recall-010",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Soy María Martínez. Para la incidencia INC-2024-6155, el contacto técnico es Isabel Jiménez."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Corrección: el contacto para INC-2024-6155 ha cambiado. Ahora es Lucía Navarro, no Isabel Jiménez."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Quién es el contacto actual para la incidencia INC-2024-6155?",
+            "expect_reply_contains_any": [
+              "lucía"
+            ],
+            "expect_reply_not_contains": [
+              "isabel"
+            ],
+            "expect_answer": "Lucía Navarro",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-001",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Soy Marta Castillo. Para la incidencia INC-2024-5339, el contacto técnico es Laura Sánchez."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Corrección: el contacto para INC-2024-5339 ha cambiado. Ahora es Cristina Díaz, no Laura Sánchez."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Quién es el contacto actual para la incidencia INC-2024-5339?",
+            "expect_reply_contains_any": [
+              "cristina"
+            ],
+            "expect_reply_not_contains": [
+              "laura"
+            ],
+            "expect_answer": "Cristina Díaz",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-002",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Hola soy Miguel Ramos. Mi reserva es RES-2025-8019."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Perdón, me equivoqué antes. El número correcto de reserva es RES-2025-6930, no RES-2025-8019."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Cuál es el número correcto de mi reserva?",
+            "expect_reply_contains_any": [
+              "RES-2025-6930"
+            ],
+            "expect_reply_not_contains": [
+              "RES-2025-8019"
+            ],
+            "expect_answer": "RES-2025-6930",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-003",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Hola, soy Andrés Romero. La incidencia INC-2024-9348 sigue sin resolverse. El acceso sigue fallando."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Os informo de que la incidencia INC-2024-9348 ya quedó resuelta esta mañana. El equipo la arregló."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿En qué estado quedó la incidencia INC-2024-9348?",
+            "expect_reply_contains_any": [
+              "resuelta",
+              "solucionada",
+              "cerrada",
+              "arreglada",
+              "arregló",
+              "resuelta"
+            ],
+            "expect_reply_not_contains": [
+              "sin resolver",
+              "pendiente",
+              "sigue sin"
+            ],
+            "expect_answer": "resuelta",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-004",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Hola, soy Pedro Fernández. La incidencia INC-2024-3504 sigue sin resolverse. El acceso sigue fallando."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Os informo de que la incidencia INC-2024-3504 ya quedó resuelta esta mañana. El equipo la resolvió."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿En qué estado quedó la incidencia INC-2024-3504?",
+            "expect_reply_contains_any": [
+              "resuelta",
+              "solucionada",
+              "cerrada",
+              "arreglada",
+              "resolvió",
+              "resuelta"
+            ],
+            "expect_reply_not_contains": [
+              "sin resolver",
+              "pendiente",
+              "sigue sin"
+            ],
+            "expect_answer": "resuelta",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-005",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Hola soy María Martínez. Mi reserva es RES-2025-7252."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Perdón, me equivoqué antes. El número correcto de reserva es RES-2025-9669, no RES-2025-7252."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Cuál es el número correcto de mi reserva?",
+            "expect_reply_contains_any": [
+              "RES-2025-9669"
+            ],
+            "expect_reply_not_contains": [
+              "RES-2025-7252"
+            ],
+            "expect_answer": "RES-2025-9669",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-006",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Soy Miguel Ramos. Para la incidencia INC-2024-2876, el contacto técnico es Miguel Ramos."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Corrección: el contacto para INC-2024-2876 ha cambiado. Ahora es Cristina Díaz, no Miguel Ramos."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Quién es el contacto actual para la incidencia INC-2024-2876?",
+            "expect_reply_contains_any": [
+              "cristina"
+            ],
+            "expect_reply_not_contains": [
+              "miguel"
+            ],
+            "expect_answer": "Cristina Díaz",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-007",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Hola soy Elena Ruiz. Mi reserva es RES-2024-5808."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Perdón, me equivoqué antes. El número correcto de reserva es RES-2025-3591, no RES-2024-5808."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Cuál es el número correcto de mi reserva?",
+            "expect_reply_contains_any": [
+              "RES-2025-3591"
+            ],
+            "expect_reply_not_contains": [
+              "RES-2024-5808"
+            ],
+            "expect_answer": "RES-2025-3591",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-008",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Soy Ana García. Para la incidencia INC-2025-9201, el contacto técnico es Pedro Fernández."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Corrección: el contacto para INC-2025-9201 ha cambiado. Ahora es Miguel Ramos, no Pedro Fernández."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿Quién es el contacto actual para la incidencia INC-2025-9201?",
+            "expect_reply_contains_any": [
+              "miguel"
+            ],
+            "expect_reply_not_contains": [
+              "pedro"
+            ],
+            "expect_answer": "Miguel Ramos",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-009",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "knowledge_update",
+    "sessions": [
+      {
+        "label": "initial",
+        "turns": [
+          {
+            "message": "Hola, soy Francisco Ortega. La incidencia INC-2025-9317 sigue sin resolverse. El acceso sigue fallando."
+          }
+        ]
+      },
+      {
+        "label": "update",
+        "turns": [
+          {
+            "message": "Os informo de que la incidencia INC-2025-9317 ya quedó solucionada esta mañana. El equipo la solucionó."
+          }
+        ]
+      },
+      {
+        "label": "recall_update",
+        "turns": [
+          {
+            "message": "¿En qué estado quedó la incidencia INC-2025-9317?",
+            "expect_reply_contains_any": [
+              "resuelta",
+              "solucionada",
+              "cerrada",
+              "arreglada",
+              "solucionó",
+              "solucionada"
+            ],
+            "expect_reply_not_contains": [
+              "sin resolver",
+              "pendiente",
+              "sigue sin"
+            ],
+            "expect_answer": "solucionada",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-knowledge-update-010",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola, soy Sergio Torres. Quería preguntar sobre traslado aeropuerto incluido en el paquete."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre excursiones opcionales disponibles en destino."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "Entre traslado aeropuerto incluido en el paquete y excursiones opcionales disponibles en destino, ¿cuál fue mi primera consulta?",
+            "expect_reply_contains_any": [
+              "traslado",
+              "aeropuerto",
+              "transfer"
+            ],
+            "expect_answer": "traslado aeropuerto incluido en el paquete",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-001",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola, soy Ana García. Quería preguntar sobre reserva de habitación con vistas al mar."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre programa de actividades para grupos."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "¿Qué te pregunté antes, lo de vistas al mar o lo de programa de actividades?",
+            "expect_reply_contains_any": [
+              "vistas",
+              "mar",
+              "habitación"
+            ],
+            "expect_answer": "reserva de habitación con vistas al mar",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-002",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola, soy Juan Rodríguez. Quería preguntar sobre cancelación del vuelo de ida."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre cambio de fechas de la reserva."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "¿Qué te pregunté antes, lo de cancelación del vuelo o lo de cambio de fechas?",
+            "expect_reply_contains_any": [
+              "cancelación",
+              "vuelo",
+              "ida"
+            ],
+            "expect_answer": "cancelación del vuelo de ida",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-003",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola. Quería preguntar sobre facturación de equipaje adicional."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre solicitud de menú especial en el vuelo."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "Entre facturación de equipaje adicional y solicitud de menú especial en el vuelo, ¿cuál fue mi primera consulta?",
+            "expect_reply_contains_any": [
+              "equipaje",
+              "maleta",
+              "facturación"
+            ],
+            "expect_answer": "facturación de equipaje adicional",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-004",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola, soy María Martínez. Quería preguntar sobre upgrade de categoría de hotel."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre inclusión de seguro de cancelación."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "¿Sobre qué tema te consulté primero: upgrade de categoría de hotel o inclusión de seguro de cancelación?",
+            "expect_reply_contains_any": [
+              "upgrade",
+              "hotel",
+              "categoría"
+            ],
+            "expect_answer": "upgrade de categoría de hotel",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-005",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola. Quería preguntar sobre reserva de habitación con vistas al mar."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre programa de actividades para grupos."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "¿Qué te pregunté antes, lo de vistas al mar o lo de programa de actividades?",
+            "expect_reply_contains_any": [
+              "vistas",
+              "mar",
+              "habitación"
+            ],
+            "expect_answer": "reserva de habitación con vistas al mar",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-006",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola. Quería preguntar sobre reserva de habitación con vistas al mar."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre programa de actividades para grupos."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "Entre reserva de habitación con vistas al mar y programa de actividades para grupos, ¿cuál fue mi primera consulta?",
+            "expect_reply_contains_any": [
+              "vistas",
+              "mar",
+              "habitación"
+            ],
+            "expect_answer": "reserva de habitación con vistas al mar",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-007",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola, soy Isabel Jiménez. Quería preguntar sobre régimen de pensión completa en el hotel."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre alquiler de vehículo en destino."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "Entre régimen de pensión completa en el hotel y alquiler de vehículo en destino, ¿cuál fue mi primera consulta?",
+            "expect_reply_contains_any": [
+              "pensión",
+              "completa",
+              "media pensión"
+            ],
+            "expect_answer": "régimen de pensión completa en el hotel",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-008",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola. Quería preguntar sobre facturación de equipaje adicional."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre solicitud de menú especial en el vuelo."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "Entre facturación de equipaje adicional y solicitud de menú especial en el vuelo, ¿cuál fue mi primera consulta?",
+            "expect_reply_contains_any": [
+              "equipaje",
+              "maleta",
+              "facturación"
+            ],
+            "expect_answer": "facturación de equipaje adicional",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-009",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "temporal_order",
+    "sessions": [
+      {
+        "label": "first_topic",
+        "turns": [
+          {
+            "message": "Hola, soy Marta Castillo. Quería preguntar sobre visado requerido para el destino."
+          }
+        ]
+      },
+      {
+        "label": "second_topic",
+        "turns": [
+          {
+            "message": "Hola de nuevo. Esta vez quería consultar sobre vacunas obligatorias para el viaje."
+          }
+        ]
+      },
+      {
+        "label": "order_recall",
+        "turns": [
+          {
+            "message": "¿Qué te pregunté antes, lo de visado o lo de vacunas?",
+            "expect_reply_contains_any": [
+              "visado",
+              "visa",
+              "documentación"
+            ],
+            "expect_answer": "visado requerido para el destino",
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-temporal-order-010",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre facturación de equipaje adicional."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi fecha de caducidad del pasaporte?",
+            "expect_reply_not_contains": [
+              "caduca el",
+              "vence el",
+              "caducidad es",
+              "expira"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-001",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre upgrade de categoría de hotel."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi código de reserva del hotel?",
+            "expect_reply_not_contains": [
+              "código del hotel es",
+              "localizador del hotel es",
+              "reserva hotel es"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-002",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre cancelación del vuelo de ida."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi fecha exacta de salida del viaje?",
+            "expect_reply_not_contains": [
+              "sales el",
+              "fecha de salida es",
+              "salida es el",
+              "vuelas el"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-003",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre reserva de habitación con vistas al mar."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi código localizador del vuelo de ida?",
+            "expect_reply_not_contains": [
+              "localizador es",
+              "PNR es",
+              "código del vuelo es",
+              "referencia del vuelo"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-004",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre tarjeta de embarque perdida o dañada."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi código de reserva del hotel?",
+            "expect_reply_not_contains": [
+              "código del hotel es",
+              "localizador del hotel es",
+              "reserva hotel es"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-005",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre cancelación del vuelo de ida."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi código de reserva del hotel?",
+            "expect_reply_not_contains": [
+              "código del hotel es",
+              "localizador del hotel es",
+              "reserva hotel es"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-006",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre cancelación del vuelo de ida."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi fecha de caducidad del pasaporte?",
+            "expect_reply_not_contains": [
+              "caduca el",
+              "vence el",
+              "caducidad es",
+              "expira"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-007",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre upgrade de categoría de hotel."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi código de reserva del hotel?",
+            "expect_reply_not_contains": [
+              "código del hotel es",
+              "localizador del hotel es",
+              "reserva hotel es"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-008",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre visado requerido para el destino."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi número de pasaporte?",
+            "expect_reply_not_contains": [
+              "pasaporte es",
+              "tu pasaporte",
+              "número de pasaporte es",
+              "documento es"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-009",
+    "source": "generated",
+    "domain": "travel_agency"
+  },
+  {
+    "type": "abstention",
+    "sessions": [
+      {
+        "label": "unrelated",
+        "turns": [
+          {
+            "message": "Hola, quería preguntar sobre reserva de habitación con vistas al mar."
+          }
+        ]
+      },
+      {
+        "label": "abstention_test",
+        "turns": [
+          {
+            "message": "¿Cuál es mi fecha de caducidad del pasaporte?",
+            "expect_reply_not_contains": [
+              "caduca el",
+              "vence el",
+              "caducidad es",
+              "expira"
+            ],
+            "marks_resolution": true
+          }
+        ]
+      }
+    ],
+    "id": "custom-abstention-010",
+    "source": "generated",
+    "domain": "travel_agency"
+  }
+]

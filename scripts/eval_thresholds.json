@@ -1,0 +1,13 @@
+{
+  "_comment": "Umbrales de los objetivos y las hipótesis",
+  "alpha": 0.05,
+  "rr_reduction_min": 0.25,
+  "rr_reduction_expected": [0.40, 0.50],
+  "str_reduction_min": 0.25,
+  "recall_at_k_min": 0.90,
+  "recall_k": 5,
+  "retrieval_p95_ms_max": 300,
+  "scenario_similarity_max": 0.40,
+  "judge_human_agreement_min": 0.90,
+  "equivalence_margin_pp": 5.0
+}
